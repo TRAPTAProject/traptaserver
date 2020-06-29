@@ -78,14 +78,7 @@ int main(int argc, char *argv[]) {
 
     DataModel dataModel(&sqdb);
 
-    QString styleSheet;
-    QFile styleSheetFile(":/stylesheet.qss");
-    if (styleSheetFile.open(QIODevice::ReadOnly | QIODevice::Text)) {
-        styleSheet = styleSheetFile.readAll();
-    }
-
     TRAPTA mainWindow(&dataModel);
-    mainWindow.setStyleSheet(styleSheet);
     mainWindow.show();
     splash.finish(&mainWindow);
     qDebug() << "Init DONE.";

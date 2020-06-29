@@ -186,7 +186,7 @@ QVariant ArcherTableModel::dataForDecorationRole(Archer *archer, int col) const 
 QVariant ArcherTableModel::dataForBackgroundRole(Archer* archer, int col) const {
     if (col==PositionColumn && _overlapBucket.contains(archer->position())) return QVariant(QBrush(QColor(250,0,0)));
     if (col==PositionColumn && archer->position()==0) return QVariant(QBrush(QColor(250,128,0)));
-    if (Util::targetIdFromPosition(archer->position())%2==0) return QVariant(QBrush(QColor(235,235,235)));
+    if (Util::targetIdFromPosition(archer->position())%2==0) return QVariant(QBrush(QColor(128,128,128)));
     return QVariant();
 }
 

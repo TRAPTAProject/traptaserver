@@ -42,6 +42,5 @@
         <file>resultarc.jpg</file>
         <file>transfer.png</file>
         <file>traptaserver.png</file>
-        <file>stylesheet.qss</file>
     </qresource>
 </RCC>
