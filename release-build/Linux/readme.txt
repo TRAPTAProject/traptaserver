@@ -1,0 +1,4 @@
+- Take a a fresh new ubuntu image
+- sudo apt install build-essential libfontconfig1-dev libfreetype6-dev libx11-dev libxext-dev libxfixes-dev libxi-dev  libxrender-dev libxcb1-dev libx11-xcb-dev libxcb-glx0-dev mesa-common-dev freeglut3 freeglut3-dev libglew1.5 libglew1.5-dev libglu1-mesa libglu1-mesa-dev libgl1-mesa-glx libgl1-mesa-dev chrpath python 
+- Go to https://download.qt.io/archive/qt/ and take the latest like qt-everywhere-src-5.15.0.tar.xz 
+- tar xvf qt-everywhere-src-5.15.0.tar.xz
