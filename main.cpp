@@ -1,19 +1,15 @@
-#include <QApplication>
-#include <QSettings>
-#include <QFileInfo>
-#include <QDebug>
-#include <QList>
-#include "datamodel.h"
+#include <QGuiApplication>
+#include <QQmlApplicationEngine>
+#include "spreadsheet/spreadsheet.h"
+#include <QQmlContext>
+#include "archers/archerlistmodel.h"
+#include "database/database.h"
 #include "util.h"
-#include "volley.h"
-#include <QSplashScreen>
-#include <QMessageBox>
-#include <QDir>
-#include "db.h"
-#include <QSqlDriver>
 #include "define.h"
-#include "trapta.h"
+#include <QDebug>
 #include <QTime>
+#include <QSettings>
+#include "datamodel.h"
 
 void messageHandler(QtMsgType type, const QMessageLogContext &context, const QString &msg) {
     QByteArray localMsg = msg.toLocal8Bit();
@@ -39,23 +35,18 @@ void messageHandler(QtMsgType type, const QMessageLogContext &context, const QSt
     fflush(stderr);
 }
 
-int main(int argc, char *argv[]) {
 
-    QApplication app(argc, argv);
-    QApplication::setOrganizationName("TRAPTA");
-    QApplication::setOrganizationDomain("trapta.eu");
-    QApplication::setApplicationName("TRAPTAServer");
+int main(int argc, char *argv[]) {
+    QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
+
+    QGuiApplication app(argc, argv);
+    QGuiApplication::setOrganizationName("TRAPTA");
+    QGuiApplication::setOrganizationDomain("trapta.eu");
+    QGuiApplication::setApplicationName("TRAPTAServer");
 
     qInstallMessageHandler(messageHandler);
 
-    qDebug() << "Initializing application...";
-    QPixmap pixmap(":/splash.png");
-    QSplashScreen splash(pixmap);
-    splash.show();
-
-    // check db version and traptadb.db in workingdir
     QSettings settings;
-    // if need to copy db file
     Util::init();
     int dbCurrentVersion = settings.value("dbversion", 0).toInt();
     qWarning() << "DB current version: " << dbCurrentVersion;
@@ -74,21 +65,21 @@ int main(int argc, char *argv[]) {
     qRegisterMetaType< QList<Volley> >("QList<Volley>");
     qRegisterMetaType< QList< QList<Volley> > >("QList< QList<Volley> >");
 
-    DB sqdb(Util::dbFilePath);
-
+    Database sqdb(Util::dbFilePath);
     DataModel dataModel(&sqdb);
 
-    QString styleSheet;
-    QFile styleSheetFile(":/stylesheet.qss");
-    if (styleSheetFile.open(QIODevice::ReadOnly | QIODevice::Text)) {
-        styleSheet = styleSheetFile.readAll();
-    }
+    ArcherListModel archerListModel(&dataModel);
 
-    TRAPTA mainWindow(&dataModel);
-    mainWindow.setStyleSheet(styleSheet);
-    mainWindow.show();
-    splash.finish(&mainWindow);
-    qDebug() << "Init DONE.";
 
-    return app.exec();
+
+    QQmlApplicationEngine engine;
+    engine.rootContext()->setContextProperty("archerListModel", &archerListModel);
+
+    engine.load(QUrl(QStringLiteral("qrc:/qml/main.qml")));
+    if (engine.rootObjects().isEmpty())
+        return -1;
+
+    app.exec();
+
+    return 0;
 }

@@ -3,7 +3,7 @@
 
 #include <QAbstractTableModel>
 #include <QHash>
-#include "archer.h"
+#include "archers/archer.h"
 #include <QSet>
 
 #define ARCHERTABLE_COLUMN_COUNT 15

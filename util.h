@@ -2,7 +2,6 @@
 #define UTIL_H
 
 #include <QString>
-#include <QComboBox>
 #include <QSet>
 #include <QList>
 
@@ -17,7 +16,7 @@ public:
     static bool resetDB();
 
     static QString workingDir;
-    static QList< QSet<int> > invertedRankSet;
+    static QSet<int> invertedRankSet;
     static QList< QList<int> > matchTargetMap;
     static QString categFilePath;
     static QString cutFilePath;
@@ -26,7 +25,7 @@ public:
 
     static QString targetLabelFromPosition(int position);
     static int positionFromTargetLabel(const QString& label);
-    static void populateCombobox(QComboBox* combo, int max);
+//    static void populateCombobox(QComboBox* combo, int max);
     static int targetIdFromPosition(int position);
     static char letterFromPosition(int position);
     static void debugQByteArray(const QByteArray& array);

@@ -2,20 +2,21 @@
 #define ARCHERMAP_H
 
 #include <QHash>
-#include "archer.h"
+#include "archers/archer.h"
 #include <QMutex>
 #include <QTimer>
-#include "match.h"
+#include "archers/match.h"
 #include <QJsonDocument>
 #include <QJsonObject>
-#include "team.h"
-#include "teamrankingmodel.h"
-#include "teamcomposermodel.h"
+#include "teams/team.h"
+#include "teams/teamrankingmodel.h"
+#include "teams/teamcomposermodel.h"
 #include "archertablemodel.h"
 #include "matchtablemodel.h"
-#include "db.h"
 #include <QTextStream>
 #include <QFile>
+
+class Database;
 
 class DataModel : public QObject {
     Q_OBJECT
@@ -27,7 +28,7 @@ public:
         DisplayDocMatch
     };
 
-    explicit DataModel(DB* sqdb);
+    explicit DataModel(Database* sqdb);
     
     Archer* getArcherById(int id);
     Archer* getArcherByPosition(int position);
@@ -164,7 +165,7 @@ private:
     bool _x10ForHeat;
 
     int _idCounter;
-    DB* _sqdb;
+    Database* _sqdb;
     int _currentShootId;  // current shoot (starts at 1)
     int _currentTabId; // current match heatScoreCard // starts at 0
     int _currentDisplayTabId;
@@ -186,7 +187,7 @@ private:
     QHash<QString, QColor> _categHue;
 
     // Map archers with archers id
-    QHash<int, Archer*> _archerMap;
+    QHash<int, Archer*> _archerMap; // map by id
     QList<ArcherTableModel*> _archerTableModelList;
     QHash<int, MatchTableModel*> _matchTableModelMap;
 

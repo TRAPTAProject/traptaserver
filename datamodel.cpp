@@ -6,10 +6,10 @@
 #include <QJsonArray>
 #include "util.h"
 #include <QMutexLocker>
-#include <QApplication>
-#include "match.h"
+#include "database/database.h"
+#include "archers/match.h"
 #include <QSettings>
-#include "heatscorecard.h"
+#include "archers/heatscorecard.h"
 #include "sortingalgo.h"
 #include "foldercompressor.h"
 #include <QTime>
@@ -17,9 +17,10 @@
 #define RANKING_TIMER_VALUE 5000 // msec : ranking is published every RANKING_TIMER_VALUE
 #define ROUND_COUNT 4
 
-DataModel::DataModel(DB* sqdb) :
+DataModel::DataModel(Database* sqdb) :
+
     _sqdb(sqdb),
-    _teamRankingModel(sqdb, this),
+    _teamRankingModel(sqdb),
     _msgFile(0),
     _msgLog(0)
 
@@ -30,6 +31,7 @@ DataModel::DataModel(DB* sqdb) :
     _rankingTimer.setInterval(RANKING_TIMER_VALUE);
     _matchRankingTimer.setSingleShot(true);
     _matchRankingTimer.setInterval(RANKING_TIMER_VALUE);
+
 
     connect(_teamRankingModel.composerModel(), SIGNAL(itemChanged(QStandardItem*)), SLOT(rebuildSideMaps()));
 
@@ -622,26 +624,7 @@ void DataModel::reloadArcherList() {
     qDeleteAll(_archerMap);
     _archerMap.clear();
 
-    // delete archer table model
-    qDeleteAll(_archerTableModelList);
-    _archerTableModelList.clear();
-
     _archerMap = _sqdb->archerMap();
-    // look for max shootId
-    int shootCount = 0;
-    foreach (Archer* archer, _archerMap.values()) {
-        int shootId = archer->shootId();
-        connect(archer, SIGNAL(archerEdited(int)), SLOT(processArcherEdited(int)));
-        if (shootCount<shootId) shootCount = shootId;
-    }
-    // for each shoot, create ArcherTableModel
-    for (int shoot=1; shoot<=shootCount; shoot++) {
-        QList<Archer*> archerList;
-        foreach (Archer* archer, _archerMap.values()) {
-            if (archer->shootId()==shoot) archerList.append(archer);
-        }
-        _archerTableModelList.append(new ArcherTableModel(shoot, archerList, _x10ForHeat));
-    }
 
     rebuildSideMaps();
     updateDrawCounting();

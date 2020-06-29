@@ -1,10 +1,10 @@
 #ifndef SORTINGALGO_H
 #define SORTINGALGO_H
 
-#include "archer.h"
-#include "match.h"
-#include "team.h"
-#include "tabletinfo.h"
+
+class Archer;
+class Match;
+class TabletInfo;
 
 class SortingAlgo {
 
@@ -19,6 +19,7 @@ public:
     static bool tabletInfoLessThan(TabletInfo* info0, TabletInfo* info1);
     static int _staticRankingHeatIndex;
     static int _staticRankingVolleyIndex;
+
 };
 
 #endif // SORTINGALGO_H

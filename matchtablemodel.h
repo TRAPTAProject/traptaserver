@@ -3,7 +3,7 @@
 
 #include <QObject>
 #include <QAbstractTableModel>
-#include "match.h"
+#include "archers/match.h"
 
 class DataModel;
 

@@ -4,7 +4,7 @@
 #include <QDir>
 #include <QStandardPaths>
 
-QList< QSet<int> > Util::invertedRankSet;
+QSet<int> Util::invertedRankSet;
 QList< QList<int> > Util::matchTargetMap;
 QString Util::workingDir;
 QString Util::categFilePath;
@@ -13,16 +13,22 @@ QString Util::dbFilePath;
 QString Util::msgLogFilePath;
 
 void Util::init() {
-    invertedRankSet.append(QSet<int>());
-    invertedRankSet.append(QSet<int>() << 3 << 2);
-    invertedRankSet.append(QSet<int>() << 5 << 4 << 7 << 2);
-    invertedRankSet.append(QSet<int>() << 9 << 8 << 13 << 4 << 11 << 6 << 15 << 2);
-
-    matchTargetMap.append(QList<int>() << 1 << 2); // big final
-    matchTargetMap.append(QList<int>() << 1 << 2); // little final
-    matchTargetMap.append(QList<int>() << 1 << 4 << 3 << 2); // semi final (2th)
-    matchTargetMap.append(QList<int>() << 1 << 8 << 5 << 4 << 3 << 6 << 7 << 2); // 4th
-    matchTargetMap.append(QList<int>() << 1 << 16 << 9 << 8 << 5 << 12 << 13 << 4 << 3 << 14 << 11 << 6 << 7 << 10 << 15 << 2); // 8th
+    invertedRankSet << 1 << 4 << 5 << 8 << 9 << 12 << 13 << 16;
+    QList<int> round16;
+    round16 << 12 << 5 << 13 << 4 << 9 << 8 << 16 << 1 << 2 << 15 << 7 << 10 << 3 << 14 << 6 << 11;
+    QList<int> round8;
+    round8 << 5 << 4 << 8 << 1 << 2 << 7 << 3 << 6;
+    QList<int> round4;
+    round4 << 4 << 1 << 2 << 3;
+    QList<int> round2;
+    round2 << 1 << 2;
+    QList<int> round1;
+    round1 << 1 << 2;
+    matchTargetMap.append(round1);
+    matchTargetMap.append(round2);
+    matchTargetMap.append(round4);
+    matchTargetMap.append(round8);
+    matchTargetMap.append(round16);
 
     QDir dir(QStandardPaths::writableLocation(QStandardPaths::DataLocation));
     if (!dir.exists()) {
@@ -128,9 +134,6 @@ int Util::positionFromTargetLabel(const QString& label) {
 
 }
 
-/*
- * returns the rank for archerIndex (0 or 1 in the match), for round and rank
- */
 int Util::getInitRank(int archerIndex, int round, int rank) {
     if (rank<1) rank=1;
     if (round<1) round=1;
@@ -141,7 +144,7 @@ int Util::getInitRank(int archerIndex, int round, int rank) {
     int rankA = rank;
     int rankB = (int)(qPow(2, round))+1-rank;
 
-    if (invertedRankSet.value(round-1).contains(rank)) {
+    if (invertedRankSet.contains(rank)) {
         if (archerIndex==0) return rankB;
         else return rankA;
     }
@@ -153,12 +156,12 @@ int Util::getInitRank(int archerIndex, int round, int rank) {
 
 }
 
-void Util::populateCombobox(QComboBox* combo, int max) {
-    if (!combo) return;
-    combo->clear();
-    for (int i=1; i<=max; i++) combo->addItem(QString("   %0   ").arg(i));
+//void Util::populateCombobox(QComboBox* combo, int max) {
+//    if (!combo) return;
+//    combo->clear();
+//    for (int i=1; i<=max; i++) combo->addItem(QString("   %0   ").arg(i));
 
-}
+//}
 
 void Util::debugQByteArray(const QByteArray& array) {
 

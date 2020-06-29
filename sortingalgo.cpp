@@ -1,4 +1,7 @@
 #include "sortingalgo.h"
+#include "archers/archer.h"
+#include "archers/match.h"
+#include "tablet/tabletinfo.h"
 
 int SortingAlgo::_staticRankingHeatIndex = 0;
 int SortingAlgo::_staticRankingVolleyIndex = 0;

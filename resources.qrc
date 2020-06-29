@@ -43,5 +43,14 @@
         <file>transfer.png</file>
         <file>traptaserver.png</file>
         <file>stylesheet.qss</file>
+        <file>qml/main.qml</file>
+        <file>qtquickcontrols2.conf</file>
+        <file>qml/MenuRow.qml</file>
+        <file>qml/ArcherTab.qml</file>
+        <file>spreadsheet/Cell.qml</file>
+        <file>spreadsheet/HeaderMouseArea.qml</file>
+        <file>spreadsheet/HeaderRow.qml</file>
+        <file>spreadsheet/SpreadSheet.qml</file>
+        <file>spreadsheet/SpreadSheetTable.qml</file>
     </qresource>
 </RCC>
