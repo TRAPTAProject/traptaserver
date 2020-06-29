@@ -1,4 +1,4 @@
-# trapta-server
+# traptaserver
 
 This is the server application of the TRAPTA project: http://www.trapta.eu
 It is to be run on a laptop. The android application send the data to this server which build the rankings.
