@@ -1,0 +1,222 @@
+QWidget {
+	background:white;
+	color:black
+}
+
+QPushButton {
+	border: 1px solid black;
+	border-radius: 2;
+	padding: 5px 15px 5px 15px;
+
+}
+
+QPushButton:hover {
+	background:#67d99e;
+}
+
+QPushButton:pressed {
+	background:black;
+	color:white;
+	
+}
+
+QComboBox {
+        border: 1px solid black;
+        border-radius: 2;
+        padding: 3px 10px 3px 10px;
+
+}
+
+QComboBox:hover {
+    background:#67d99e;
+}
+
+QComboBox::down-arrow {
+      width: 10px;
+      height: 10px;
+        image: url(:/triangle-down.png);
+ }
+
+QComboBox::drop-down {
+     subcontrol-origin: padding;
+     subcontrol-position: top right;
+     width: 15px;
+     border-left: 1px solid black;
+ }
+
+QComboBox QAbstractItemView {
+    background-color: lightgray;
+
+
+}
+
+QSpinBox {
+	border: 1px solid black;
+	border-radius: 2;
+	padding: 3px 10px 3px 10px;
+
+}
+
+ QSpinBox::up-button {
+     subcontrol-origin: border;
+     subcontrol-position: top right; 
+     width: 15px;
+     border-width: 1px;
+	 border-left: 1px solid black;
+ }
+
+QSpinBox::up-arrow {
+      width: 10px;
+      height: 10px;
+	image: url(:/triangle-up.png);
+ }
+
+
+ QSpinBox::down-button {
+     subcontrol-origin: border;
+     subcontrol-position: bottom right; 
+     width: 15px;
+     border-width: 1px;
+	 border-left: 1px solid black;
+ }
+
+QSpinBox::down-arrow {
+      width: 10px;
+      height: 10px;
+	image: url(:/triangle-down.png);
+ }
+
+
+QCheckBox {
+	border: none;
+	border-radius: 2;
+	padding: 3px 10px 3px 10px;
+}
+
+QCheckBox:hover {
+	background:#67d99e;
+}
+
+QCheckBox:checked {
+	background: black;
+	color: white;
+}
+
+QCheckBox::indicator {
+    border: 1px solid black;
+    width: 15px;
+    height: 15px;
+
+}
+
+QCheckBox::indicator:checked {
+	background:white;
+    border: 1px solid white;
+    width: 15px;
+    height: 15px;
+	image: url(:/checkbox.png);
+}
+
+QRadioButton {
+	border: none;
+	border-radius: 2;
+	padding: 3px 10px 3px 10px;
+}
+
+
+QRadioButton:hover {
+	background:#67d99e;
+}
+
+QRadioButton::indicator {
+    border: 2px solid white;
+    border-radius: 3px;
+    background: black;
+
+}
+
+QRadioButton::checked {
+	background: black;
+	color: white;
+
+}
+
+QRadioButton::indicator:checked {
+    border: 2px solid black;
+    border-radius: 3px;
+    background: white;
+}
+
+QLineEdit {
+	background: white;
+	color: black;
+	selection-color: white;
+	selection-background-color: black;
+}
+
+
+QTableView {
+	selection-color:black;
+	selection-background-color: #67d99e;
+	border: 1px solid black;
+}
+
+QScrollBar:horizontal,  QScrollBar:vertical {   
+     background: gray;   
+}
+
+QHeaderView::section {
+    color:  light-gray;
+	border: 1px solid black;
+}
+
+QTabWidget::pane {
+     border-top: 1px solid black;
+ }
+
+QTabBar::tab {
+	border: 1px solid black;
+	border-bottom: 0px;
+	padding: 5px 15px 5px 15px;
+}
+
+QTabBar::tab:hover {
+     background: #67d99e;
+
+ }
+
+
+QTabBar::tab:selected {
+     background: black; 
+	color: white;
+}
+
+QMenuBar::item:selected {
+	background: #67d99e;
+
+}
+
+QMenuBar::item:pressed {
+    background: black;
+	color: white;
+
+}
+
+QMenu {
+	border: 1px solid black;
+}
+
+QMenu::item:selected {
+	background:#67d99e;
+}
+
+QLineEdit {
+	border: 1px solid black;
+	border-radius: 2;
+	padding: 5px 15px 5px 15px;
+}
+
+QLineEdit:hover {
+	border: 1px solid #67d99e; 
+                
+}

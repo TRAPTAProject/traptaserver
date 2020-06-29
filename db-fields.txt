@@ -1,0 +1,46 @@
+SELECT * FROM categorie_Classement, Engagement, Licence, Cibles WHERE (enrolled.categ=categ.id AND archer.license=enrolled.license AND enrolled.id==target.id AND enrolled.compet==
+
+
+categorie_Classement:
+IDCategorie_classement
+abv_categorie_classement
+
+Engagement:
+IDEngagement
+IDLicence
+IDCategorie_classement
+IDCompetition
+Trispot
+
+Licence:
+IDLicence
+NOMCOMPLET
+CIE
+
+Cibles:
+IDEngagement
+No_cibles
+
+Engagement.IDLicence=Licence.IDLicence AND Engagement.IDEngagement = Cibles.IDEngagement AND Engagement.IDCategorie_classement = categorie_Classement.IDCategorie_classement AND Engagement.IDCompetition = 3
+
+IDEngagement
+No_cibles
+abv_categorie_classement
+IDLicence
+lb_categorie_classement
+NOMCOMPLET
+CIE
+
+=================
+Lieu_competition
+lb_competition
+date_debut_competition
+IDCompetition
+
+SELECT IDCompetition, lb_competition, Lieu_competition, date_debut_competition FROM Competition
+
+
+==============
+SELECT Engagement.IDEngagement, Licence.IDLicence, abv_categorie_classement, lb_categorie_classement, NOMCOMPLET, CIE, Engagement.no_depart, No_cibles, Trispot FROM categorie_Classement, Engagement, Licence, Cibles WHERE (Engagement.IDLicence=Licence.IDLicence AND Engagement.IDEngagement = Cibles.IDEngagement AND Engagement.IDCategorie_classement = categorie_Classement.IDCategorie_classement AND Engagement.IDCompetition=3)
+
+

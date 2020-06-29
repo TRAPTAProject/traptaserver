@@ -1,0 +1,13 @@
+{
+    "license":"456789G",
+    "startId":1,
+    "position":12,
+    "name":"alfred hitchcock",
+    "club":"mon club",
+    "heatList":[[[1,2,3,-1,-1,-1],[5,6,7,-1,-1,-1]],[[],[]]],
+    "trispot": true,
+    "teammate": true,
+    "id":154589,
+    "category":"CHCL"
+
+}

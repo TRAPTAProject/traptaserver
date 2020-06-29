@@ -1,0 +1,20 @@
+//explicit Match(int id, int tabId, const QString &categ, int round, int rank);
+//~Match();
+
+//// init: (comes from db, so do not commit to db)
+//void init(int target, bool trispot, Archer* archer0, Archer* archer1, int winner, int mode);
+
+{
+    "id":1256,
+    "tabId":4778,
+    "categ":"ma categ",
+    "round":4,
+    "rank":2,
+    "target":2,
+    "trispot":false,
+    "archerList":[1456, 1256],
+    "winner":-1,
+    "mode":0,
+    "scoreList":[[[1,2,3], [4,5,6]], []]
+
+}
