@@ -500,8 +500,8 @@ QScrollBar::add-line:vertical:hover,
 QScrollBar::add-line:vertical:on
 {
     border-image: url(:/dark/down_arrow.svg);
-    height: 4ex;
-    width: 4ex;
+    height: 1ex;
+    width: 1ex;
     subcontrol-position: bottom;
     subcontrol-origin: margin;
 }
@@ -755,8 +755,8 @@ QComboBox::drop-down
 QComboBox::down-arrow
 {
     border-image: url(:/dark/down_arrow_disabled.svg);
-    width: 4ex;
-    height: 4ex;
+    width: 3ex;
+    height: 2ex;
 }
 
 QComboBox::down-arrow:on,
@@ -764,8 +764,8 @@ QComboBox::down-arrow:hover,
 QComboBox::down-arrow:focus
 {
     border-image: url(:/dark/down_arrow.svg);
-    width: 4ex;
-    height: 4ex;
+    width: 3ex;
+    height: 2ex;
 }
 
 QAbstractSpinBox
@@ -813,15 +813,15 @@ QAbstractSpinBox::down-arrow:disabled,
 QAbstractSpinBox::down-arrow:off
 {
     border-image: url(:/dark/down_arrow_disabled.svg);
-    width: 4ex;
-    height: 3ex;
+    width: 2ex;
+    height: 1ex;
 }
 
 QAbstractSpinBox::down-arrow:hover
 {
     border-image: url(:/dark/down_arrow.svg);
-    width: 4ex;
-    height: 3ex;
+    width: 2ex;
+    height: 1ex;
 }
 
 QLabel
@@ -1592,8 +1592,8 @@ QSpinBox::up-arrow,
 QDoubleSpinBox::up-arrow
 {
     border-image: url(:/dark/up_arrow.svg);
-    width: 4ex;
-    height: 3ex;
+    width: 0.9ex;
+    height: 0.6ex;
 }
 
 QSpinBox::up-arrow:hover,
@@ -1602,8 +1602,8 @@ QDoubleSpinBox::up-arrow:hover,
 QDoubleSpinBox::up-arrow:pressed
 {
     border-image: url(:/dark/up_arrow-hover.svg);
-    width: 4ex;
-    height: 3ex;
+    width: 0.9ex;
+    height: 0.6ex;
 }
 
 QSpinBox::up-arrow:disabled,
@@ -1628,8 +1628,8 @@ QSpinBox::down-arrow,
 QDoubleSpinBox::down-arrow
 {
     border-image: url(:/dark/down_arrow.svg);
-    width: 4ex;
-    height: 3ex;
+    width: 2ex;
+    height: 1ex;
 }
 
 QSpinBox::down-arrow:hover,
@@ -1638,8 +1638,8 @@ QDoubleSpinBox::down-arrow:hover,
 QDoubleSpinBox::down-arrow:pressed
 {
     border-image: url(:/dark/down_arrow-hover.svg);
-    width: 4ex;
-    height: 3ex;
+    width: 2ex;
+    height: 1ex;
 }
 
 QSpinBox::down-arrow:disabled,
