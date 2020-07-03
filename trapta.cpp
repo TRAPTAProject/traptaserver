@@ -21,6 +21,7 @@
 #include "foldercompressor.h"
 #include "define.h"
 #include "archertablemodel.h"
+#include <QtGlobal>
 
 
 TRAPTA::TRAPTA(DataModel* model) :
@@ -127,12 +128,12 @@ TRAPTA::TRAPTA(DataModel* model) :
     qDebug() << "List of match categories:" << _dataModel->getMatchCategList();
 
     //*************** link to resultarc
-#ifdef Q_OS_WIN32
+#ifdef Q_OS_WIN
     connect(ui->actionImportResultarc, SIGNAL(triggered()), this, SLOT(menuImportRA()));
     connect(ui->action_Exporter_vers_Resultarc, SIGNAL(triggered()), this, SLOT(menuExportRA()));
 #endif
 
-#ifndef Q_OS_WIN32
+#ifndef Q_OS_WIN
     ui->actionImportResultarc->setVisible(false);
     ui->action_Exporter_vers_Resultarc->setVisible(false);
 #endif
@@ -468,7 +469,7 @@ void TRAPTA::keyPressEvent(QKeyEvent* event) {
 //############################### MENU handling
 
 
-#ifdef Q_OS_WIN32
+#ifdef Q_OS_WIN
 
 void TRAPTA::menuImportRA() {
     qDebug() << "Import Resultarc";

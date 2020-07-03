@@ -46,12 +46,13 @@ int main(int argc, char *argv[]) {
     QApplication::setOrganizationDomain("trapta.eu");
     QApplication::setApplicationName("TRAPTAServer");
 
-    // set stylesheet
+    // set stylesheet except for macOS because macOS is sooo beautiful naturally.
+#ifndef Q_OS_MACOS
     QFile file(":/dark.qss");
     file.open(QFile::ReadOnly | QFile::Text);
     QTextStream stream(&file);
     app.setStyleSheet(stream.readAll());
-
+#endif
 
     qInstallMessageHandler(messageHandler);
 
