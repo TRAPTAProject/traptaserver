@@ -380,7 +380,7 @@ QAbstractScrollArea
 
 QScrollBar:horizontal
 {
-    height: 5ex;
+    height: 2.5ex;
     margin: 0.3ex 1.5ex 0.3ex 1.5ex;
     border: 0.1ex transparent #2A2929;
     border-radius: 0.4ex;
@@ -451,7 +451,7 @@ QScrollBar::sub-page:horizontal
 QScrollBar:vertical
 {
     background-color: #2A2929;
-    width: 5ex;
+    width: 2.5ex;
     margin: 1.5ex 0.3ex 1.5ex 0.3ex;
     border: 0.1ex transparent #2A2929;
     border-radius: 0.4ex;
@@ -500,8 +500,8 @@ QScrollBar::add-line:vertical:hover,
 QScrollBar::add-line:vertical:on
 {
     border-image: url(:/dark/down_arrow.svg);
-    height: 4ex;
-    width: 4ex;
+    height: 1ex;
+    width: 1ex;
     subcontrol-position: bottom;
     subcontrol-origin: margin;
 }
@@ -674,7 +674,7 @@ QComboBox
     border-style: solid;
     border: 0.3ex solid #76797c;
     border-radius: 0.2ex;
-    padding: 2ex;
+    padding: 1ex;
     min-width: 7.5ex;
 }
 
@@ -755,8 +755,8 @@ QComboBox::drop-down
 QComboBox::down-arrow
 {
     border-image: url(:/dark/down_arrow_disabled.svg);
-    width: 4ex;
-    height: 4ex;
+    width: 1ex;
+    height: 1ex;
 }
 
 QComboBox::down-arrow:on,
@@ -764,8 +764,8 @@ QComboBox::down-arrow:hover,
 QComboBox::down-arrow:focus
 {
     border-image: url(:/dark/down_arrow.svg);
-    width: 4ex;
-    height: 4ex;
+    width: 1ex;
+    height: 1ex;
 }
 
 QAbstractSpinBox
@@ -797,15 +797,15 @@ QAbstractSpinBox::up-arrow:disabled,
 QAbstractSpinBox::up-arrow:off
 {
     border-image: url(:/dark/up_arrow_disabled.svg);
-    width: 0.9ex;
-    height: 0.6ex;
+    width: 1ex;
+    height: 1ex;
 }
 
 QAbstractSpinBox::up-arrow:hover
 {
     border-image: url(:/dark/up_arrow.svg);
-    width: 0.9ex;
-    height: 0.6ex;
+    width: 1ex;
+    height: 1ex;
 }
 
 QAbstractSpinBox::down-arrow,
@@ -813,15 +813,15 @@ QAbstractSpinBox::down-arrow:disabled,
 QAbstractSpinBox::down-arrow:off
 {
     border-image: url(:/dark/down_arrow_disabled.svg);
-    width: 4ex;
-    height: 3ex;
+    width: 1ex;
+    height: 1ex;
 }
 
 QAbstractSpinBox::down-arrow:hover
 {
     border-image: url(:/dark/down_arrow.svg);
-    width: 4ex;
-    height: 3ex;
+    width: 1ex;
+    height: 1ex;
 }
 
 QLabel
@@ -1592,8 +1592,8 @@ QSpinBox::up-arrow,
 QDoubleSpinBox::up-arrow
 {
     border-image: url(:/dark/up_arrow.svg);
-    width: 4ex;
-    height: 3ex;
+    width: 1ex;
+    height: 1ex;
 }
 
 QSpinBox::up-arrow:hover,
@@ -1602,8 +1602,8 @@ QDoubleSpinBox::up-arrow:hover,
 QDoubleSpinBox::up-arrow:pressed
 {
     border-image: url(:/dark/up_arrow-hover.svg);
-    width: 4ex;
-    height: 3ex;
+    width: 1ex;
+    height: 1ex;
 }
 
 QSpinBox::up-arrow:disabled,
@@ -1628,8 +1628,8 @@ QSpinBox::down-arrow,
 QDoubleSpinBox::down-arrow
 {
     border-image: url(:/dark/down_arrow.svg);
-    width: 4ex;
-    height: 3ex;
+    width: 1ex;
+    height: 1ex;
 }
 
 QSpinBox::down-arrow:hover,
@@ -1638,8 +1638,8 @@ QDoubleSpinBox::down-arrow:hover,
 QDoubleSpinBox::down-arrow:pressed
 {
     border-image: url(:/dark/down_arrow-hover.svg);
-    width: 4ex;
-    height: 3ex;
+    width: 1ex;
+    height: 1ex;
 }
 
 QSpinBox::down-arrow:disabled,
