@@ -2,3 +2,5 @@
 TRAPTA.pro.user.0dc6151
 
 *.user
+
+release-build/Linux/trapta-linux_x86-64.tar.gz

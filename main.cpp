@@ -39,6 +39,13 @@ void messageHandler(QtMsgType type, const QMessageLogContext &context, const QSt
     fflush(stderr);
 }
 
+void setSytleSheet(QApplication* app, const QString qss) {
+    QFile file(qss);
+    file.open(QFile::ReadOnly | QFile::Text);
+    QTextStream stream(&file);
+    app->setStyleSheet(stream.readAll());
+}
+
 int main(int argc, char *argv[]) {
 
     QApplication app(argc, argv);
@@ -46,12 +53,12 @@ int main(int argc, char *argv[]) {
     QApplication::setOrganizationDomain("trapta.eu");
     QApplication::setApplicationName("TRAPTAServer");
 
-    // set stylesheet except for macOS because macOS is sooo beautiful naturally.
-#ifndef Q_OS_MACOS
-    QFile file(":/dark.qss");
-    file.open(QFile::ReadOnly | QFile::Text);
-    QTextStream stream(&file);
-    app.setStyleSheet(stream.readAll());
+#ifdef Q_OS_LINUX
+    setSytleSheet(&app, ":/stylesheet-linux.qss");
+#endif
+
+#ifdef Q_OS_WIN
+    setSytleSheet(&app, ":/stylesheet-win.qss");
 #endif
 
     qInstallMessageHandler(messageHandler);

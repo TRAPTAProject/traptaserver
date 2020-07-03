@@ -40,6 +40,7 @@
         <file>dark/radio_checked_disabled.svg</file>
         <file>dark/radio_unchecked.svg</file>
         <file>dark/radio_unchecked_disabled.svg</file>
-        <file>dark.qss</file>
+        <file>stylesheet-linux.qss</file>
+        <file>stylesheet-win.qss</file>
     </qresource>
 </RCC>
