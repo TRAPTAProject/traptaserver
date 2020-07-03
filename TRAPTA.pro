@@ -155,7 +155,8 @@ FORMS    += \
 }
 
 RESOURCES += \
-    resources.qrc
+    resources.qrc \
+    breeze.qrc
 
 RC_FILE = trapta.rc
 ICON = trapta.icns

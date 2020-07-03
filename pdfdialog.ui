@@ -44,9 +44,6 @@
        <height>60</height>
       </size>
      </property>
-     <property name="styleSheet">
-      <string notr="true">background-color:#ccc</string>
-     </property>
      <property name="verticalScrollBarPolicy">
       <enum>Qt::ScrollBarAlwaysOff</enum>
      </property>

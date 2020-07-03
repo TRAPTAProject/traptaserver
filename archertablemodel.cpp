@@ -53,6 +53,7 @@ bool ArcherTableModel::addArcher(Archer* archer) {
     _archerList.prepend(archer);
     endInsertRows();
     emit dataChanged(createIndex(0,0), createIndex(_archerList.count(), ARCHERTABLE_COLUMN_COUNT));
+    return true;
 }
 
 bool ArcherTableModel::removeArcher(int row) {
@@ -60,6 +61,7 @@ bool ArcherTableModel::removeArcher(int row) {
     _archerList.removeAt(row);
     endRemoveRows();
     emit dataChanged(createIndex(0,0), createIndex(_archerList.count(), ARCHERTABLE_COLUMN_COUNT));
+    return true;
 }
 
 

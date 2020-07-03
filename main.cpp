@@ -46,6 +46,13 @@ int main(int argc, char *argv[]) {
     QApplication::setOrganizationDomain("trapta.eu");
     QApplication::setApplicationName("TRAPTAServer");
 
+    // set stylesheet
+    QFile file(":/dark.qss");
+    file.open(QFile::ReadOnly | QFile::Text);
+    QTextStream stream(&file);
+    app.setStyleSheet(stream.readAll());
+
+
     qInstallMessageHandler(messageHandler);
 
     qDebug() << "Initializing application...";

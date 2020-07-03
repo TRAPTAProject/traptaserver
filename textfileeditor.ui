@@ -38,9 +38,6 @@
    </item>
    <item>
     <widget class="QPlainTextEdit" name="textEdit">
-     <property name="styleSheet">
-      <string notr="true">background-color:#ccc</string>
-     </property>
      <property name="frameShape">
       <enum>QFrame::NoFrame</enum>
      </property>

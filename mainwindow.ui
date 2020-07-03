@@ -17,8 +17,8 @@
    <iconset resource="resources.qrc">
     <normaloff>:/icon.png</normaloff>:/icon.png</iconset>
   </property>
-  <property name="styleSheet">
-   <string notr="true"/>
+  <property name="autoFillBackground">
+   <bool>false</bool>
   </property>
   <widget class="QWidget" name="centralWidget">
    <layout class="QHBoxLayout" name="horizontalLayout">
@@ -349,7 +349,7 @@
            <item>
             <widget class="QLabel" name="label_8">
              <property name="text">
-              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Exemple 1&lt;/span&gt;:&lt;span style=&quot; color:#ffff00;&quot;/&gt;&lt;span style=&quot; color:#0000ff;&quot;&gt;SHCL + SHCL + SFCL | JHCL | JFCL&lt;/span&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;(3 scores additionnés: meilleur SHCL + 2eme meilleur SHCL + meilleur SFCL ou meilleur JHCL ou meilleur JFCL)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Exemple 2&lt;/span&gt;:&lt;span style=&quot; color:#0000ff;&quot;&gt; SHCL* + JHCL*&lt;/span&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;(n scores additionnés: tous les SHCL + tous les JHCL)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;Dans le panneau &amp;quot;ARCHERS&amp;quot;, n'oubliez pas de cocher la colonne 'équipier' des archers qui compteront comme équipiers.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Exemple 1&lt;/span&gt;:&lt;span style=&quot; color:#ffff00;&quot;&gt;SHCL + SHCL + SFCL | JHCL | JFCL&lt;/span&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;(3 scores additionnés: meilleur SHCL + 2eme meilleur SHCL + meilleur SFCL ou meilleur JHCL ou meilleur JFCL)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Exemple 2&lt;/span&gt;:&lt;span style=&quot; color:#0000ff;&quot;/&gt;&lt;span style=&quot; color:#ffff00;&quot;&gt;SHCL* + JHCL*&lt;/span&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;(n scores additionnés: tous les SHCL + tous les JHCL)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;Dans le panneau &amp;quot;ARCHERS&amp;quot;, n'oubliez pas de cocher la colonne 'équipier' des archers qui compteront comme équipiers.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
              </property>
              <property name="wordWrap">
               <bool>true</bool>
@@ -698,7 +698,7 @@
      <x>0</x>
      <y>0</y>
      <width>1000</width>
-     <height>22</height>
+     <height>20</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuArcher">

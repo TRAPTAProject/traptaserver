@@ -58,6 +58,7 @@ bool MatchTableModel::addMatchList(QList<Match*> matchList) {
     _matchList.append(matchList);
     endInsertRows();
     //emit dataChanged(createIndex(0,0), createIndex(_matchList.count(), MATCHTABLE_COLUMN_COUNT));
+    return true;
 }
 
 bool MatchTableModel::removeMatchRow(int row) {
@@ -65,6 +66,7 @@ bool MatchTableModel::removeMatchRow(int row) {
     _matchList.removeAt(row);
     endRemoveRows();
     //emit dataChanged(createIndex(0,0), createIndex(_matchList.count(), MATCHTABLE_COLUMN_COUNT));
+    return true;
 }
 
 

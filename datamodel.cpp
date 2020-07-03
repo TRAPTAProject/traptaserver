@@ -1001,4 +1001,5 @@ bool DataModel::restore(const QString& filename) {
 //    reloadArcherList();
 //    // load matches
 //    loadMatchFromDB();
+    return true;
 }

@@ -193,12 +193,14 @@ bool MatchTableController::deleteMatchRound(int roundId) {
 bool MatchTableController::deleteMatchByCateg(const QString& categ) {
     _model->deleteMatchCateg(_currentTabId, categ);
     setRoundId(_currentTabId);
+    return true;
 }
 
 bool MatchTableController::deleteMatchByRow(int row) {
     Match* match = _matchTableModel->matchAt(row);
     _model->deleteMatch(match->id());
     _matchTableModel->removeMatchRow(row);
+    return true;
 }
 
 void MatchTableController::menuSelection(QAction* action) {

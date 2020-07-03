@@ -104,12 +104,13 @@ void TeamRankingModel::rebuildRanking(const QHash<QString, QList<Archer*>* >& cl
 bool TeamRankingModel::removeRows(int row, int count, const QModelIndex & parent) {
     beginRemoveRows(parent, row, row+count-1);
     endRemoveRows();
+    return true;
 }
 
 bool TeamRankingModel::insertRows(int row, int count, const QModelIndex & parent) {
     beginInsertRows(parent, row, row+count-1);
     endInsertRows();
-
+    return true;
 }
 
 int TeamRankingModel::rowCount(const QModelIndex& parent) const {
