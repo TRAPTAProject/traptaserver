@@ -52,6 +52,7 @@ QWidget
     border-image: none;
     border: 0px transparent black;
     outline: 0;
+    font: 11pt;
 }
 
 QWidget:item:hover
@@ -275,7 +276,7 @@ QAbstractScrollArea
 
 QScrollBar:horizontal
 {
-    height: 1.5ex;
+    height: 2.5ex;
     margin: 0.3ex 1.5ex 0.3ex 1.5ex;
     border: 0.1ex transparent #2A2929;
     border-radius: 0.4ex;
@@ -284,7 +285,7 @@ QScrollBar:horizontal
 
 QScrollBar::handle:horizontal
 {
-    background-color: #605F5F;
+    background-color: #3daee9;
     min-width: 0.5ex;
     border-radius: 0.4ex;
 }
@@ -342,7 +343,7 @@ QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal
 QScrollBar:vertical
 {
     background-color: #2A2929;
-    width: 1.5ex;
+    width: 2.5ex;
     margin: 1.5ex 0.3ex 1.5ex 0.3ex;
     border: 0.1ex transparent #2A2929;
     border-radius: 0.4ex;
@@ -350,7 +351,7 @@ QScrollBar:vertical
 
 QScrollBar::handle:vertical
 {
-    background-color: #605F5F;
+    background-color: #3daee9;
     min-height: 0.5ex;
     border-radius: 0.4ex;
 }
@@ -526,11 +527,11 @@ QToolBar::separator:vertical
 QPushButton
 {
     color: #31363B;
-    background-color: qlineargradient(x1: 0.5, y1: 0.5 x2: 0.5, y2: 1, stop: 0 #EFF0F1, stop: 0.5 #eaebec);
-    border-width: 0.1ex;
+    background-color:#EFF0F1;
+    border-width: 0.4ex;
     border-color: #BAB9B8;
     border-style: solid;
-    padding: 0.5ex;
+    padding: 1ex;
     border-radius: 0.2ex;
     outline: none;
 }
@@ -558,9 +559,9 @@ QComboBox
 {
     selection-background-color: #33A4DF;
     border-style: solid;
-    border: 0.1ex solid #BAB9B8;
+    border: 0.4ex solid #BAB9B8;
     border-radius: 0.2ex;
-    padding: 0.5ex;
+    padding: 1ex;
     min-width: 7.5ex;
 }
 
@@ -578,7 +579,7 @@ QPlainTextEdit:hover,
 QAbstractView:hover,
 QTreeView:hover
 {
-    border: 0.1ex solid #33A4DF;
+    border: 0.4ex solid #33A4DF;
     color: #31363B;
 }
 
@@ -598,7 +599,6 @@ QComboBox:on
 {
     padding-top: 0.3ex;
     padding-left: 0.4ex;
-    selection-background-color: #4a4a4a;
 }
 
 QComboBox QAbstractItemView
@@ -712,25 +712,25 @@ QTabWidget::pane
 
 QTabWidget::pane:top
 {
-    border: 0.1ex solid #BAB9B8;
+    border: 0.4ex solid #BAB9B8;
     top: -0.1ex;
 }
 
 QTabWidget::pane:bottom
 {
-    border: 0.1ex solid #BAB9B8;
+    border: 0.4ex solid #BAB9B8;
     bottom: -0.1ex;
 }
 
 QTabWidget::pane:left
 {
-    border: 0.1ex solid #BAB9B8;
+    border: 0.4ex solid #BAB9B8;
     right: -0.1ex;
 }
 
 QTabWidget::pane:right
 {
-    border: 0.1ex solid #BAB9B8;
+    border: 0.4ex solid #BAB9B8;
     left: -0.1ex;
 }
 
@@ -1524,20 +1524,20 @@ QPushButton:hover
 
 QPushButton:focus
 {
-    background-color: qlineargradient(x1: 0.5, y1: 0.5 x2: 0.5, y2: 1, stop: 0 #4cbdff, stop: 0.5 #33a4e8);
+    background-color: #4cbdff;
     color: white;
 }
 
 QPushButton:focus:hover
 {
-    background-color: qlineargradient(x1: 0.5, y1: 0.5 x2: 0.5, y2: 1, stop: 0 #bedfec, stop: 0.5 #b9dae7);
+    background-color: #bedfec;
     color: #31363B;
 }
 
 QPushButton:focus:pressed,
 QPushButton:pressed
 {
-    background-color: qlineargradient(x1: 0.5, y1: 0.5 x2: 0.5, y2: 1, stop: 0 #bedfec, stop: 0.5 #b9dae7);
+    background-color: #bedfec;
     color: #31363B;
 }
 

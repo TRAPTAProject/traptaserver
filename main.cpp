@@ -53,8 +53,6 @@ int main(int argc, char *argv[]) {
     QApplication::setOrganizationDomain("trapta.eu");
     QApplication::setApplicationName("TRAPTAServer");
 
-    setSytleSheet(&app, ":/light.qss");
-
     qInstallMessageHandler(messageHandler);
 
     qDebug() << "Initializing application...";
@@ -88,6 +86,32 @@ int main(int argc, char *argv[]) {
     DataModel dataModel(&sqdb);
 
     TRAPTA mainWindow(&dataModel);
+    if (settings.value("stylesheet", "dark")=="dark") {
+        setSytleSheet(&app, ":/dark.qss");
+        mainWindow.setColorMenu("Couleurs claires");
+    }
+    else {
+        setSytleSheet(&app, ":/light.qss");
+        mainWindow.setColorMenu("Couleurs sombres");
+    }
+
+    // Manage style sheet color change and save to settings
+    QObject::connect(&mainWindow, &TRAPTA::changeColor,
+        [&app, &mainWindow]() {
+            QSettings settings;
+            if (settings.value("stylesheet", "dark")=="dark") {
+                setSytleSheet(&app, ":/light.qss");
+                settings.setValue("stylesheet", "light");
+                mainWindow.setColorMenu("Couleurs sombres");
+            }
+            else {
+                setSytleSheet(&app, ":/dark.qss");
+                settings.setValue("stylesheet", "dark");
+                mainWindow.setColorMenu("Couleurs claires");
+            }
+        }
+    );
+
     mainWindow.show();
     splash.finish(&mainWindow);
     qDebug() << "Init DONE.";

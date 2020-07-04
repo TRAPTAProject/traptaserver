@@ -40,6 +40,7 @@ signals:
     void startTabletServer();
     void startDisplayServer();
     void configureBroadcaster(int command, int heatIndex, QString address, int portTablet, int portDisplay);
+    void changeColor();
 
 protected:
     void keyPressEvent(QKeyEvent* event);
@@ -63,6 +64,7 @@ public slots:
     void onVolleyStatusChanged(int heatIndex, int volleyCount);
     void processBroadcasting();
     void greenLightTimeout();
+    void setColorMenu(const QString& label);
 
 private slots:
 
@@ -79,6 +81,7 @@ private slots:
     void menuDisplayCut();
     void menuArchive();
     void menuRestore();
+    void menuChangeColor();
 
     void heatArrowCountChanged(int value);
     void matchArrowCount(int value);

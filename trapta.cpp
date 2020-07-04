@@ -116,6 +116,7 @@ TRAPTA::TRAPTA(DataModel* model) :
     connect(ui->action_Charger, SIGNAL(triggered()), SLOT(menuRestore()));
     connect(ui->actionSupprimer_tour_de_match_courant, SIGNAL(triggered()), SLOT(menuDeleteMatchTab()));
     connect(ui->action_Ajouter_categorie, SIGNAL(triggered()), _matchTableController, SLOT(addMatchSet()));
+    connect(ui->action_change_color, SIGNAL(triggered()), SIGNAL(changeColor()));
 
     _currentSelectedTablet = -1;
     ui->displayRoundBox->setVisible(false);
@@ -211,6 +212,11 @@ void TRAPTA::processBroadcasting() {
 
 void TRAPTA::greenLightTimeout() {
     ui->serverGreenLight->setPixmap(QPixmap(":/grey-light.png"));
+}
+
+void TRAPTA::setColorMenu(const QString &label)
+{
+    ui->action_change_color->setText(label);
 }
 
 void TRAPTA::menuDeleteMatchTab() {
@@ -762,5 +768,9 @@ void TRAPTA::menuRestore() {
 //    delete _matchController;
 //    _tableController = new TableController(_tableView, _dataModel, this);
 //    _matchController = new MatchController(ui->tabWidget, ui->displayRoundBox, _dataModel);
-//    processStartFilterChanged(0);
+    //    processStartFilterChanged(0);
+}
+
+void TRAPTA::menuChangeColor() {
+
 }

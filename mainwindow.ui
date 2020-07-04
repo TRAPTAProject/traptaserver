@@ -349,7 +349,14 @@
            <item>
             <widget class="QLabel" name="label_8">
              <property name="text">
-              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Exemple 1&lt;/span&gt;:&lt;span style=&quot; color:#ffff00;&quot;&gt;SHCL + SHCL + SFCL | JHCL | JFCL&lt;/span&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;(3 scores additionnés: meilleur SHCL + 2eme meilleur SHCL + meilleur SFCL ou meilleur JHCL ou meilleur JFCL)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Exemple 2&lt;/span&gt;:&lt;span style=&quot; color:#0000ff;&quot;/&gt;&lt;span style=&quot; color:#ffff00;&quot;&gt;SHCL* + JHCL*&lt;/span&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;(n scores additionnés: tous les SHCL + tous les JHCL)&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;Dans le panneau &amp;quot;ARCHERS&amp;quot;, n'oubliez pas de cocher la colonne 'équipier' des archers qui compteront comme équipiers.&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              <string>Exemple 1 : SHCL + SHCL + SFCL | JHCL | JFCL (3 scores additionnés: meilleur SHCL + 2eme meilleur SHCL + meilleur SFCL ou meilleur JHCL ou meilleur JFCL) 
+
+Exemple 2 : SHCL* + JHCL* (n scores additionnés: tous les SHCL + tous les JHCL)
+
+Dans le panneau ARCHERS, n'oubliez pas de cocher la colonne 'équipier' des archers qui compteront comme équipiers.</string>
+             </property>
+             <property name="textFormat">
+              <enum>Qt::PlainText</enum>
              </property>
              <property name="wordWrap">
               <bool>true</bool>
@@ -721,6 +728,7 @@
     <property name="title">
      <string>  Réglages    </string>
     </property>
+    <addaction name="action_change_color"/>
     <addaction name="action_display_categ"/>
     <addaction name="action_display_cut"/>
     <addaction name="actionSettings"/>
@@ -1565,6 +1573,11 @@
   <action name="action_display_cut">
    <property name="text">
     <string>Affichage cut...</string>
+   </property>
+  </action>
+  <action name="action_change_color">
+   <property name="text">
+    <string>Couleurs claires</string>
    </property>
   </action>
  </widget>
