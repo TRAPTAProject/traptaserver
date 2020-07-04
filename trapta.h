@@ -3,16 +3,16 @@
 
 #include <QMainWindow>
 #include <QThread>
-#include "tabletserver.h"
-#include "udpbroadcaster.h"
-#include "settingsdialog.h"
-#include "tabletstatus.h"
-#include "displayserver.h"
+#include "tablets/tabletserver.h"
+#include "network/udpbroadcaster.h"
+#include "dialogs/settingsdialog.h"
+#include "tablets/tabletstatus.h"
+#include "network/displayserver.h"
 #include <QProcess>
 #include <QLabel>
-#include "archertablemodel.h"
-#include "archertablecontroller.h"
-#include "matchtablecontroller.h"
+#include "archers/archertablemodel.h"
+#include "archers/archertablecontroller.h"
+#include "archers/matchtablecontroller.h"
 #include "lcdspinner.h"
 
 #define BROADCASTER_ON

@@ -1,46 +1,50 @@
 <RCC>
     <qresource prefix="/">
-        <file>down_arrow.png</file>
-        <file>handle.png</file>
-        <file>about.png</file>
-        <file>green-light.png</file>
-        <file>grey-light.png</file>
-        <file>red-light.png</file>
-        <file>checkbox.png</file>
-        <file>triangle-down.png</file>
-        <file>triangle-up.png</file>
-        <file>icon.png</file>
-        <file>close-button.png</file>
-        <file>triangle-down-dis.png</file>
-        <file>triangle-up-dis.png</file>
-        <file>info-icon.png</file>
-        <file>export.png</file>
-        <file>import.png</file>
-        <file>next.png</file>
-        <file>prev.png</file>
-        <file>exchange.png</file>
-        <file>export-ra.png</file>
-        <file>import-ra.png</file>
-        <file>splash.png</file>
-        <file>warning-icon.png</file>
-        <file>minus.png</file>
-        <file>plus.png</file>
-        <file>printer.png</file>
-        <file>pdf.png</file>
         <file>hogwarts.csv</file>
-        <file>clear.png</file>
-        <file>rollcall.png</file>
-        <file>tango-critical.png</file>
-        <file>tango-idea.png</file>
-        <file>tango-info.png</file>
-        <file>tango-question.png</file>
-        <file>tango-warning.png</file>
         <file>categories.txt</file>
         <file>traptadb.db</file>
         <file>cut.txt</file>
         <file>FFTA.wdd</file>
-        <file>resultarc.jpg</file>
-        <file>transfer.png</file>
-        <file>traptaserver.png</file>
+        <file>images/about.png</file>
+        <file>images/checkbox.png</file>
+        <file>images/clear.png</file>
+        <file>images/close-button.png</file>
+        <file>images/down_arrow.png</file>
+        <file>images/dropdown.png</file>
+        <file>images/exchange.png</file>
+        <file>images/export-ra.png</file>
+        <file>images/export.png</file>
+        <file>images/fail.png</file>
+        <file>images/green-light.png</file>
+        <file>images/grey-light.png</file>
+        <file>images/handle.png</file>
+        <file>images/icon.png</file>
+        <file>images/import-ra.png</file>
+        <file>images/import.png</file>
+        <file>images/info-icon.png</file>
+        <file>images/internet.png</file>
+        <file>images/minus.png</file>
+        <file>images/next.png</file>
+        <file>images/pass.png</file>
+        <file>images/pdf.png</file>
+        <file>images/plus.png</file>
+        <file>images/prev.png</file>
+        <file>images/printer.png</file>
+        <file>images/red-light.png</file>
+        <file>images/resultarc.jpg</file>
+        <file>images/rollcall.png</file>
+        <file>images/splash.png</file>
+        <file>images/tango-critical.png</file>
+        <file>images/tango-idea.png</file>
+        <file>images/tango-info.png</file>
+        <file>images/tango-question.png</file>
+        <file>images/tango-warning.png</file>
+        <file>images/transfer.png</file>
+        <file>images/traptaserver.png</file>
+        <file>images/triangle-down-dis.png</file>
+        <file>images/triangle-down.png</file>
+        <file>images/triangle-up-dis.png</file>
+        <file>images/triangle-up.png</file>
+        <file>images/warning-icon.png</file>
     </qresource>
 </RCC>

@@ -2,8 +2,8 @@
 #define TABLECONTROLLER_H
 
 #include <QObject>
-#include "archers/archertablemodel.h"
-#include "database/datamodel.h"
+#include "archertablemodel.h"
+#include "datamodel.h"
 #include <QTableView>
 #include <QMenu>
 #include <QAction>

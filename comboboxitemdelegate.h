@@ -2,7 +2,7 @@
 #define COMBOBOXITEMDELEGATE_H
 
 #include <QStyledItemDelegate>
-#include "archertablemodel.h"
+#include "archers/archertablemodel.h"
 
 class ComboboxItemDelegate : public QStyledItemDelegate
 {

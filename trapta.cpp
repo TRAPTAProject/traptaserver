@@ -3,24 +3,24 @@
 #include <QCheckBox>
 #include <QHBoxLayout>
 #include <QDebug>
-#include "connectivity.h"
-#include "ipchooser.h"
+#include "network/connectivity.h"
+#include "network/ipchooser.h"
 #include "util.h"
 #include <QFileDialog>
 #include <QSettings>
 #include <QLineEdit>
-#include <stringlistdialog.h>
-#include "dialogmatchname.h"
+#include "dialogs/stringlistdialog.h"
+#include "archers/dialogmatchname.h"
 #include <QKeyEvent>
 #include <QBoxLayout>
-#include "pdfcreator.h"
-#include "pdfdialog.h"
+#include "pdf/pdfcreator.h"
+#include "pdf/pdfdialog.h"
 #include <QGraphicsOpacityEffect>
-#include "msgbox.h"
-#include "textfileeditor.h"
+#include "dialogs/msgbox.h"
+#include "dialogs/textfileeditor.h"
 #include "foldercompressor.h"
 #include "define.h"
-#include "archertablemodel.h"
+#include "archers/archertablemodel.h"
 #include <QtGlobal>
 
 
@@ -206,12 +206,12 @@ void TRAPTA::onVolleyStatusChanged(int heatIndex, int volleyCount) {
 
 void TRAPTA::processBroadcasting() {
     _greenLightTimer.stop();
-    ui->serverGreenLight->setPixmap(QPixmap(":/green-light.png"));
+    ui->serverGreenLight->setPixmap(QPixmap(":/images/green-light.png"));
     _greenLightTimer.start(2500);
 }
 
 void TRAPTA::greenLightTimeout() {
-    ui->serverGreenLight->setPixmap(QPixmap(":/grey-light.png"));
+    ui->serverGreenLight->setPixmap(QPixmap(":/images/grey-light.png"));
 }
 
 void TRAPTA::setColorMenu(const QString &label)
@@ -377,7 +377,7 @@ void TRAPTA::startServer() {
 void TRAPTA::processBroadcastError() {
     qDebug() << "Broadcast error";
     ui->serverInfoLabel->setText(tr("Erreur broadcast: redémarrez l'application"));
-    ui->serverGreenLight->setPixmap(QPixmap(":/red-light.png"));
+    ui->serverGreenLight->setPixmap(QPixmap(":/images/red-light.png"));
     MsgBox::popup(MsgBox::critical, "Problème réseau. Veuillez redémarrer l'application.", "", "     OK     ");
 
 }

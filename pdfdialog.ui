@@ -104,7 +104,7 @@ Date et lieu</string>
          <string/>
         </property>
         <property name="pixmap">
-         <pixmap resource="resources.qrc">:/icon.png</pixmap>
+         <pixmap resource="resources.qrc">:/images/icon.png</pixmap>
         </property>
         <property name="alignment">
          <set>Qt::AlignCenter</set>

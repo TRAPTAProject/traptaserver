@@ -1,10 +1,10 @@
 #ifndef SORTINGALGO_H
 #define SORTINGALGO_H
 
-#include "archer.h"
-#include "match.h"
-#include "team.h"
-#include "tabletinfo.h"
+#include "archers/archer.h"
+#include "archers/match.h"
+#include "teams/team.h"
+#include "tablets/tabletinfo.h"
 
 class SortingAlgo {
 

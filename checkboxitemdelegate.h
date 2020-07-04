@@ -2,7 +2,7 @@
 #define CHECKBOXITEMDELEGATE_H
 
 #include <QStyledItemDelegate>
-#include "archertablemodel.h"
+#include "archers/archertablemodel.h"
 
 class CheckboxItemDelegate : public QStyledItemDelegate
 {

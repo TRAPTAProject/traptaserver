@@ -3,13 +3,13 @@
 #include <QFileInfo>
 #include <QDebug>
 #include <QList>
-#include "datamodel.h"
+#include "database/datamodel.h"
 #include "util.h"
-#include "volley.h"
+#include "archers/volley.h"
 #include <QSplashScreen>
 #include <QMessageBox>
 #include <QDir>
-#include "db.h"
+#include "database/database.h"
 #include <QSqlDriver>
 #include "define.h"
 #include "trapta.h"
@@ -56,7 +56,7 @@ int main(int argc, char *argv[]) {
     qInstallMessageHandler(messageHandler);
 
     qDebug() << "Initializing application...";
-    QPixmap pixmap(":/splash.png");
+    QPixmap pixmap(":/images/splash.png");
     QSplashScreen splash(pixmap);
     splash.show();
 
@@ -81,7 +81,7 @@ int main(int argc, char *argv[]) {
     qRegisterMetaType< QList<Volley> >("QList<Volley>");
     qRegisterMetaType< QList< QList<Volley> > >("QList< QList<Volley> >");
 
-    DB sqdb(Util::dbFilePath);
+    Database sqdb(Util::dbFilePath);
 
     DataModel dataModel(&sqdb);
 

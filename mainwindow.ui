@@ -14,7 +14,7 @@
    <string>to be defined</string>
   </property>
   <property name="windowIcon">
-   <iconset resource="resources.qrc">
+   <iconset>
     <normaloff>:/icon.png</normaloff>:/icon.png</iconset>
   </property>
   <property name="autoFillBackground">
@@ -327,7 +327,7 @@
                  <string>  Ajouter une catégorie d'équipes  </string>
                 </property>
                 <property name="icon">
-                 <iconset resource="resources.qrc">
+                 <iconset>
                   <normaloff>:/plus.png</normaloff>:/plus.png</iconset>
                 </property>
                </widget>
@@ -338,7 +338,7 @@
                  <string>  Supprimer catégorie  </string>
                 </property>
                 <property name="icon">
-                 <iconset resource="resources.qrc">
+                 <iconset>
                   <normaloff>:/minus.png</normaloff>:/minus.png</iconset>
                 </property>
                </widget>
@@ -644,7 +644,7 @@ Dans le panneau ARCHERS, n'oubliez pas de cocher la colonne 'équipier' des arch
             <string/>
            </property>
            <property name="pixmap">
-            <pixmap resource="resources.qrc">:/red-light.png</pixmap>
+            <pixmap resource="resources.qrc">:/images/green-light.png</pixmap>
            </property>
           </widget>
          </item>
@@ -705,7 +705,7 @@ Dans le panneau ARCHERS, n'oubliez pas de cocher la colonne 'équipier' des arch
      <x>0</x>
      <y>0</y>
      <width>1000</width>
-     <height>20</height>
+     <height>22</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuArcher">
@@ -993,7 +993,7 @@ Dans le panneau ARCHERS, n'oubliez pas de cocher la colonne 'équipier' des arch
                   <string/>
                  </property>
                  <property name="icon">
-                  <iconset resource="resources.qrc">
+                  <iconset>
                    <normaloff>:/triangle-up.png</normaloff>:/triangle-up.png</iconset>
                  </property>
                 </widget>
@@ -1013,7 +1013,7 @@ Dans le panneau ARCHERS, n'oubliez pas de cocher la colonne 'équipier' des arch
                   <string/>
                  </property>
                  <property name="icon">
-                  <iconset resource="resources.qrc">
+                  <iconset>
                    <normaloff>:/triangle-down.png</normaloff>:/triangle-down.png</iconset>
                  </property>
                 </widget>
@@ -1146,7 +1146,7 @@ Dans le panneau ARCHERS, n'oubliez pas de cocher la colonne 'équipier' des arch
                   <string/>
                  </property>
                  <property name="icon">
-                  <iconset resource="resources.qrc">
+                  <iconset>
                    <normaloff>:/triangle-up.png</normaloff>
                    <disabledoff>:/triangle-up-dis.png</disabledoff>:/triangle-up.png</iconset>
                  </property>
@@ -1170,7 +1170,7 @@ Dans le panneau ARCHERS, n'oubliez pas de cocher la colonne 'équipier' des arch
                   <string/>
                  </property>
                  <property name="icon">
-                  <iconset resource="resources.qrc">
+                  <iconset>
                    <normaloff>:/triangle-down.png</normaloff>
                    <disabledoff>:/triangle-down-dis.png</disabledoff>:/triangle-down.png</iconset>
                  </property>
@@ -1294,7 +1294,7 @@ Dans le panneau ARCHERS, n'oubliez pas de cocher la colonne 'équipier' des arch
             <string>  Effacer statut tablettes</string>
            </property>
            <property name="icon">
-            <iconset resource="resources.qrc">
+            <iconset>
              <normaloff>:/clear.png</normaloff>:/clear.png</iconset>
            </property>
           </widget>
@@ -1309,7 +1309,7 @@ Dans le panneau ARCHERS, n'oubliez pas de cocher la colonne 'équipier' des arch
   <action name="actionImportCSV">
    <property name="icon">
     <iconset resource="resources.qrc">
-     <normaloff>:/import.png</normaloff>:/import.png</iconset>
+     <normaloff>:/images/import.png</normaloff>:/images/import.png</iconset>
    </property>
    <property name="text">
     <string>Importer depuis fichier CSV...</string>
@@ -1318,7 +1318,7 @@ Dans le panneau ARCHERS, n'oubliez pas de cocher la colonne 'équipier' des arch
   <action name="actionExportCVS">
    <property name="icon">
     <iconset resource="resources.qrc">
-     <normaloff>:/export.png</normaloff>:/export.png</iconset>
+     <normaloff>:/images/export.png</normaloff>:/images/export.png</iconset>
    </property>
    <property name="text">
     <string>Exporter vers fichier CSV...</string>
@@ -1327,7 +1327,7 @@ Dans le panneau ARCHERS, n'oubliez pas de cocher la colonne 'équipier' des arch
   <action name="action_addArcher">
    <property name="icon">
     <iconset resource="resources.qrc">
-     <normaloff>:/plus.png</normaloff>:/plus.png</iconset>
+     <normaloff>:/images/plus.png</normaloff>:/images/plus.png</iconset>
    </property>
    <property name="text">
     <string>Ajouter un archer...</string>
@@ -1336,7 +1336,7 @@ Dans le panneau ARCHERS, n'oubliez pas de cocher la colonne 'équipier' des arch
   <action name="action_delete_points">
    <property name="icon">
     <iconset resource="resources.qrc">
-     <normaloff>:/clear.png</normaloff>:/clear.png</iconset>
+     <normaloff>:/images/clear.png</normaloff>:/images/clear.png</iconset>
    </property>
    <property name="text">
     <string>Remettre à zéro points départ courant</string>
@@ -1360,7 +1360,7 @@ Dans le panneau ARCHERS, n'oubliez pas de cocher la colonne 'équipier' des arch
   <action name="actionImportResultarc">
    <property name="icon">
     <iconset resource="resources.qrc">
-     <normaloff>:/import-ra.png</normaloff>:/import-ra.png</iconset>
+     <normaloff>:/images/import-ra.png</normaloff>:/images/import-ra.png</iconset>
    </property>
    <property name="text">
     <string>Importer depuis Result'arc...</string>
@@ -1369,7 +1369,7 @@ Dans le panneau ARCHERS, n'oubliez pas de cocher la colonne 'équipier' des arch
   <action name="action_Exporter_vers_Resultarc">
    <property name="icon">
     <iconset resource="resources.qrc">
-     <normaloff>:/export-ra.png</normaloff>:/export-ra.png</iconset>
+     <normaloff>:/images/export-ra.png</normaloff>:/images/export-ra.png</iconset>
    </property>
    <property name="text">
     <string>Exporter vers Result'arc...</string>
@@ -1406,7 +1406,7 @@ Dans le panneau ARCHERS, n'oubliez pas de cocher la colonne 'équipier' des arch
   </action>
   <action name="actionPrint">
    <property name="icon">
-    <iconset resource="resources.qrc">
+    <iconset>
      <normaloff>:/pdf.png</normaloff>:/pdf.png</iconset>
    </property>
    <property name="text">
@@ -1420,7 +1420,7 @@ Dans le panneau ARCHERS, n'oubliez pas de cocher la colonne 'équipier' des arch
   </action>
   <action name="actionEmptyList">
    <property name="icon">
-    <iconset resource="resources.qrc">
+    <iconset>
      <normaloff>:/minus.png</normaloff>:/minus.png</iconset>
    </property>
    <property name="text">
@@ -1430,7 +1430,7 @@ Dans le panneau ARCHERS, n'oubliez pas de cocher la colonne 'équipier' des arch
   <action name="action_delete_current_startId">
    <property name="icon">
     <iconset resource="resources.qrc">
-     <normaloff>:/close-button.png</normaloff>:/close-button.png</iconset>
+     <normaloff>:/images/close-button.png</normaloff>:/images/close-button.png</iconset>
    </property>
    <property name="text">
     <string>Effacer archers départ courant</string>
@@ -1453,7 +1453,7 @@ Dans le panneau ARCHERS, n'oubliez pas de cocher la colonne 'équipier' des arch
   </action>
   <action name="action_Ajouter_tour_de_matche">
    <property name="icon">
-    <iconset resource="resources.qrc">
+    <iconset>
      <normaloff>:/plus.png</normaloff>:/plus.png</iconset>
    </property>
    <property name="text">
@@ -1467,7 +1467,7 @@ Dans le panneau ARCHERS, n'oubliez pas de cocher la colonne 'équipier' des arch
   </action>
   <action name="action_delete_selecte_archer">
    <property name="icon">
-    <iconset resource="resources.qrc">
+    <iconset>
      <normaloff>:/minus.png</normaloff>:/minus.png</iconset>
    </property>
    <property name="text">
@@ -1476,7 +1476,7 @@ Dans le panneau ARCHERS, n'oubliez pas de cocher la colonne 'équipier' des arch
   </action>
   <action name="action_reset_all">
    <property name="icon">
-    <iconset resource="resources.qrc">
+    <iconset>
      <normaloff>:/minus.png</normaloff>:/minus.png</iconset>
    </property>
    <property name="text">
@@ -1486,7 +1486,7 @@ Dans le panneau ARCHERS, n'oubliez pas de cocher la colonne 'équipier' des arch
   <action name="actionAddSample">
    <property name="icon">
     <iconset resource="resources.qrc">
-     <normaloff>:/import.png</normaloff>:/import.png</iconset>
+     <normaloff>:/images/import.png</normaloff>:/images/import.png</iconset>
    </property>
    <property name="text">
     <string>Ajouter liste d'exemple</string>
@@ -1500,7 +1500,7 @@ Dans le panneau ARCHERS, n'oubliez pas de cocher la colonne 'équipier' des arch
   <action name="action_Export_PDF_vers_fichier">
    <property name="icon">
     <iconset resource="resources.qrc">
-     <normaloff>:/pdf.png</normaloff>:/pdf.png</iconset>
+     <normaloff>:/images/pdf.png</normaloff>:/images/pdf.png</iconset>
    </property>
    <property name="text">
     <string>Feuilles de scores...</string>
@@ -1508,7 +1508,7 @@ Dans le panneau ARCHERS, n'oubliez pas de cocher la colonne 'équipier' des arch
   </action>
   <action name="action_Export_PDF_vers_internet">
    <property name="icon">
-    <iconset resource="resources.qrc">
+    <iconset>
      <normaloff>:/pdf.png</normaloff>:/pdf.png</iconset>
    </property>
    <property name="text">
@@ -1518,7 +1518,7 @@ Dans le panneau ARCHERS, n'oubliez pas de cocher la colonne 'équipier' des arch
   <action name="action_reset_all_2">
    <property name="icon">
     <iconset resource="resources.qrc">
-     <normaloff>:/close-button.png</normaloff>:/close-button.png</iconset>
+     <normaloff>:/images/close-button.png</normaloff>:/images/close-button.png</iconset>
    </property>
    <property name="text">
     <string>Effacer tout</string>
@@ -1537,7 +1537,7 @@ Dans le panneau ARCHERS, n'oubliez pas de cocher la colonne 'équipier' des arch
   <action name="action_Ajouter_tour_de_match">
    <property name="icon">
     <iconset resource="resources.qrc">
-     <normaloff>:/plus.png</normaloff>:/plus.png</iconset>
+     <normaloff>:/images/plus.png</normaloff>:/images/plus.png</iconset>
    </property>
    <property name="text">
     <string>Ajouter un tour de match...  </string>
@@ -1546,7 +1546,7 @@ Dans le panneau ARCHERS, n'oubliez pas de cocher la colonne 'équipier' des arch
   <action name="action_Ajouter_categorie">
    <property name="icon">
     <iconset resource="resources.qrc">
-     <normaloff>:/plus.png</normaloff>:/plus.png</iconset>
+     <normaloff>:/images/plus.png</normaloff>:/images/plus.png</iconset>
    </property>
    <property name="text">
     <string>Ajouter une catégorie...</string>
@@ -1554,7 +1554,7 @@ Dans le panneau ARCHERS, n'oubliez pas de cocher la colonne 'équipier' des arch
   </action>
   <action name="actionAjouter_match_manuel">
    <property name="icon">
-    <iconset resource="resources.qrc">
+    <iconset>
      <normaloff>:/plus.png</normaloff>:/plus.png</iconset>
    </property>
    <property name="text">
@@ -1564,7 +1564,7 @@ Dans le panneau ARCHERS, n'oubliez pas de cocher la colonne 'équipier' des arch
   <action name="actionSupprimer_tour_de_match_courant">
    <property name="icon">
     <iconset resource="resources.qrc">
-     <normaloff>:/close-button.png</normaloff>:/close-button.png</iconset>
+     <normaloff>:/images/close-button.png</normaloff>:/images/close-button.png</iconset>
    </property>
    <property name="text">
     <string>Supprimer le tour de match courant</string>
