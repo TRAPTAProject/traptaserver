@@ -53,13 +53,7 @@ int main(int argc, char *argv[]) {
     QApplication::setOrganizationDomain("trapta.eu");
     QApplication::setApplicationName("TRAPTAServer");
 
-#ifdef Q_OS_LINUX
-    setSytleSheet(&app, ":/stylesheet-linux.qss");
-#endif
-
-#ifdef Q_OS_WIN
-    setSytleSheet(&app, ":/stylesheet-win.qss");
-#endif
+    setSytleSheet(&app, ":/light.qss");
 
     qInstallMessageHandler(messageHandler);
 

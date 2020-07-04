@@ -49,26 +49,24 @@ QWidget
 {
     color: #eff0f1;
     background-color: #31363b;
-    selection-background-color:#39a85c;
+    selection-background-color:#3daee9;
     selection-color: #eff0f1;
     background-clip: border;
     border-image: none;
     border: 0px transparent black;
     outline: 0;
-    font: 11pt;
 }
 
 QWidget:item:hover
 {
-    background-color: #39a85c;
+    background-color: #3daee9;
     color: #eff0f1;
 }
 
 QWidget:item:selected
 {
-    background-color: #39a85c;
+    background-color: #3daee9;
 }
-
 
 QGroupBox::indicator
 {
@@ -90,8 +88,6 @@ QGroupBox::indicator:checked:pressed
     border: none;
     border-image: url(:/dark/checkbox_checked.svg);
 }
-
-
 
 QGroupBox::indicator:checked:disabled
 {
@@ -123,10 +119,10 @@ QMenuBar::item:selected
 QMenuBar::item:pressed
 {
     border: 0.1ex solid #76797c;
-    background-color: #39a85c;
+    background-color: #3daee9;
     color: #eff0f1;
-    margin-bottom: -0.5ex;
-    padding-bottom: 0.5ex;
+    margin-bottom: -0.1ex;
+    padding-bottom: 0.1ex;
 }
 
 QMenu
@@ -230,7 +226,7 @@ QAbstractItemView
 QWidget:focus,
 QMenuBar:focus
 {
-    border: 0.1ex solid #39a85c;
+    border: 0.1ex solid #3daee9;
 }
 
 QTabWidget:focus,
@@ -253,7 +249,7 @@ QGroupBox
 {
     border: 0.1ex solid #76797c;
     border-radius: 0.2ex;
-    padding-top: 5ex;
+    padding-top: 1ex;
     margin-top: 1ex;
 }
 
@@ -261,8 +257,8 @@ QGroupBox::title
 {
     subcontrol-origin: margin;
     subcontrol-position: top center;
-    padding-left: 0.5ex;
-    padding-right: 0.5ex;
+    padding-left: 0.1ex;
+    padding-right: 0.1ex;
     margin-top: -0.7ex;
 }
 
@@ -275,7 +271,7 @@ QAbstractScrollArea
 
 QScrollBar:horizontal
 {
-    height: 2.5ex;
+    height: 1.5ex;
     margin: 0.3ex 1.5ex 0.3ex 1.5ex;
     border: 0.1ex transparent #2A2929;
     border-radius: 0.4ex;
@@ -284,7 +280,7 @@ QScrollBar:horizontal
 
 QScrollBar::handle:horizontal
 {
-    background-color: #39a85c;
+    background-color: #3daee9;
     min-width: 0.5ex;
     border-radius: 0.4ex;
 }
@@ -346,7 +342,7 @@ QScrollBar::sub-page:horizontal
 QScrollBar:vertical
 {
     background-color: #2A2929;
-    width: 2.5ex;
+    width: 1.5ex;
     margin: 1.5ex 0.3ex 1.5ex 0.3ex;
     border: 0.1ex transparent #2A2929;
     border-radius: 0.4ex;
@@ -354,7 +350,7 @@ QScrollBar:vertical
 
 QScrollBar::handle:vertical
 {
-    background-color: #39a85c;
+    background-color: #3daee9;
     min-height: 0.5ex;
     border-radius: 0.4ex;
 }
@@ -528,11 +524,11 @@ QToolBar::separator:vertical
 QPushButton
 {
     color: #eff0f1;
-    background-color:#3b4045;
-    border-width: 0.3ex;
+    background-color: qlineargradient(x1: 0.5, y1: 0.5 x2: 0.5, y2: 1, stop: 0 #3b4045, stop: 0.5 #31363b);
+    border-width: 0.1ex;
     border-color: #76797c;
     border-style: solid;
-    padding: 1ex;
+    padding: 0.5ex;
     border-radius: 0.2ex;
     outline: none;
 }
@@ -565,11 +561,11 @@ QPushButton:pressed
 
 QComboBox
 {
-    selection-background-color: #39a85c;
+    selection-background-color: #3daee9;
     border-style: solid;
-    border: 0.3ex solid #76797c;
+    border: 0.1ex solid #76797c;
     border-radius: 0.2ex;
-    padding: 1ex;
+    padding: 0.5ex;
     min-width: 7.5ex;
 }
 
@@ -581,15 +577,15 @@ QPushButton:checked
 
 QPushButton:hover
 {
-    background-color:  #454a4f;
-    border: 0.3ex solid #39a85c;
+    background-color: qlineargradient(x1: 0.5, y1: 0.5 x2: 0.5, y2: 1, stop: 0 #454a4f, stop: 0.5 #3b4045);
+    border: 0.1ex solid #3daee9;
     color: #eff0f1;
 }
 
 QPushButton:checked:hover
 {
     background-color: qlineargradient(x1: 0.5, y1: 0.5 x2: 0.5, y2: 1, stop: 0 #808386, stop: 0.5 #76797c);
-    border: 0.1ex solid #39a85c;
+    border: 0.1ex solid #3daee9;
     color: #eff0f1;
 }
 
@@ -601,7 +597,7 @@ QPlainTextEdit:hover,
 QAbstractView:hover,
 QTreeView:hover
 {
-    border: 0.3ex solid #39a85c;
+    border: 0.1ex solid #3daee9;
     color: #eff0f1;
 }
 
@@ -619,10 +615,8 @@ QTreeView:hover:pressed
 
 QComboBox:on
 {
-    border-style: solid;
-    border: 0.3ex solid #76797c;
-    padding-top: 1ex;
-    padding-left: 1ex;
+    padding-top: 0.3ex;
+    padding-left: 0.4ex;
     selection-background-color: #4a4a4a;
 }
 
@@ -630,8 +624,8 @@ QComboBox QAbstractItemView
 {
     background-color: #232629;
     border-radius: 0.2ex;
-    border: 0.3ex solid #76797c;
-    selection-background-color: #39a85c;
+    border: 0.1ex solid #76797c;
+    selection-background-color: #3daee9;
 }
 
 QComboBox::drop-down
@@ -650,8 +644,8 @@ QComboBox::drop-down
 QComboBox::down-arrow
 {
     border-image: url(:/dark/down_arrow_disabled.svg);
-    width: 1ex;
-    height: 1ex;
+    width: 0.9ex;
+    height: 0.6ex;
 }
 
 QComboBox::down-arrow:on,
@@ -659,8 +653,8 @@ QComboBox::down-arrow:hover,
 QComboBox::down-arrow:focus
 {
     border-image: url(:/dark/down_arrow.svg);
-    width: 1ex;
-    height: 1ex;
+    width: 0.9ex;
+    height: 0.6ex;
 }
 
 QAbstractSpinBox
@@ -692,15 +686,15 @@ QAbstractSpinBox::up-arrow:disabled,
 QAbstractSpinBox::up-arrow:off
 {
     border-image: url(:/dark/up_arrow_disabled.svg);
-    width: 1ex;
-    height: 1ex;
+    width: 0.9ex;
+    height: 0.6ex;
 }
 
 QAbstractSpinBox::up-arrow:hover
 {
     border-image: url(:/dark/up_arrow.svg);
-    width: 1ex;
-    height: 1ex;
+    width: 0.9ex;
+    height: 0.6ex;
 }
 
 QAbstractSpinBox::down-arrow,
@@ -708,15 +702,15 @@ QAbstractSpinBox::down-arrow:disabled,
 QAbstractSpinBox::down-arrow:off
 {
     border-image: url(:/dark/down_arrow_disabled.svg);
-    width: 1ex;
-    height: 1ex;
+    width: 0.9ex;
+    height: 0.6ex;
 }
 
 QAbstractSpinBox::down-arrow:hover
 {
     border-image: url(:/dark/down_arrow.svg);
-    width: 1ex;
-    height: 1ex;
+    width: 0.9ex;
+    height: 0.6ex;
 }
 
 QLabel
@@ -733,25 +727,25 @@ QTabWidget::pane
 
 QTabWidget::pane:top
 {
-    border: 0.3ex solid #76797c;
+    border: 0.1ex solid #76797c;
     top: -0.1ex;
 }
 
 QTabWidget::pane:bottom
 {
-    border: 0.3ex solid #76797c;
+    border: 0.1ex solid #76797c;
     bottom: -0.1ex;
 }
 
 QTabWidget::pane:left
 {
-    border: 0.3ex solid #76797c;
+    border: 0.1ex solid #76797c;
     right: -0.1ex;
 }
 
 QTabWidget::pane:right
 {
-    border: 0.3ex solid #76797c;
+    border: 0.1ex solid #76797c;
     left: -0.1ex;
 }
 
@@ -1158,7 +1152,7 @@ QTreeView::item:!selected:hover
     background-color: rgba(61, 173, 232, 0.2);
     outline: 0;
     color: #eff0f1;
-    padding: 0.5ex;
+    padding: 0.3ex;
 }
 
 
@@ -1205,13 +1199,13 @@ QSlider::handle:horizontal:focus,
 QSlider::handle:vertical:hover,
 QSlider::handle:vertical:focus
 {
-    border: 0.1ex solid #39a85c;
+    border: 0.1ex solid #3daee9;
 }
 
 QSlider::sub-page:horizontal,
 QSlider::add-page:vertical
 {
-    background: #39a85c;
+    background: #3daee9;
     border-radius: 0.3ex;
 }
 
@@ -1259,15 +1253,15 @@ QToolButton:hover,
 QToolButton::menu-button:hover
 {
     background-color: transparent;
-    border: 0.1ex solid #39a85c;
+    border: 0.1ex solid #3daee9;
 }
 
 QToolButton:checked,
 QToolButton:pressed,
 QToolButton::menu-button:pressed
 {
-    background-color: #39a85c;
-    border: 0.1ex solid #39a85c;
+    background-color: #3daee9;
+    border: 0.1ex solid #3daee9;
     padding: 0.5ex;
 }
 
@@ -1312,7 +1306,7 @@ QTableView::item:pressed,
 QListView::item:pressed,
 QTreeView::item:pressed
 {
-    background: #39a85c;
+    background: #3daee9;
     color: #eff0f1;
 }
 
@@ -1320,7 +1314,7 @@ QTableView::item:selected:active,
 QTreeView::item:selected:active,
 QListView::item:selected:active
 {
-    background: #39a85c;
+    background: #3daee9;
     color: #eff0f1;
 }
 
@@ -1407,12 +1401,12 @@ QToolBox
 QToolBox:selected
 {
     background-color: #31363b;
-    border-color: #39a85c;
+    border-color: #3daee9;
 }
 
 QToolBox:hover
 {
-    border-color: #39a85c;
+    border-color: #3daee9;
 }
 
 QStatusBar::item
@@ -1462,7 +1456,7 @@ QProgressBar:horizontal
 
 QProgressBar::chunk:horizontal
 {
-    background-color: #39a85c;
+    background-color: #3daee9;
     border: 0.1ex transparent;
     border-radius: 0.3ex;
 }
@@ -1487,8 +1481,8 @@ QSpinBox::up-arrow,
 QDoubleSpinBox::up-arrow
 {
     border-image: url(:/dark/up_arrow.svg);
-    width: 1ex;
-    height: 1ex;
+    width: 0.9ex;
+    height: 0.6ex;
 }
 
 QSpinBox::up-arrow:hover,
@@ -1497,8 +1491,8 @@ QDoubleSpinBox::up-arrow:hover,
 QDoubleSpinBox::up-arrow:pressed
 {
     border-image: url(:/dark/up_arrow-hover.svg);
-    width: 1ex;
-    height: 1ex;
+    width: 0.9ex;
+    height: 0.6ex;
 }
 
 QSpinBox::up-arrow:disabled,
@@ -1523,8 +1517,8 @@ QSpinBox::down-arrow,
 QDoubleSpinBox::down-arrow
 {
     border-image: url(:/dark/down_arrow.svg);
-    width: 1ex;
-    height: 1ex;
+    width: 0.9ex;
+    height: 0.6ex;
 }
 
 QSpinBox::down-arrow:hover,
@@ -1533,8 +1527,8 @@ QDoubleSpinBox::down-arrow:hover,
 QDoubleSpinBox::down-arrow:pressed
 {
     border-image: url(:/dark/down_arrow-hover.svg);
-    width: 1ex;
-    height: 1ex;
+    width: 0.9ex;
+    height: 0.6ex;
 }
 
 QSpinBox::down-arrow:disabled,
