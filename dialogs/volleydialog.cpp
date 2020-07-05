@@ -1,6 +1,6 @@
 #include "volleydialog.h"
 #include "ui_volleydialog.h"
-#include "volley.h"
+#include "archers/volley.h"
 
 VolleyDialog::VolleyDialog(Archer* archer, int heatIndex, int arrowCount, QWidget *parent) :
     QDialog(parent),

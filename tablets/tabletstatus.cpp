@@ -1,5 +1,5 @@
 #include "tabletstatus.h"
-#include "sortingalgo.h"
+#include "utils/sortingalgo.h"
 #include <QDebug>
 
 TabletStatus::TabletStatus(QObject *parent) :

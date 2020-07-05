@@ -3,7 +3,7 @@
 #include <QSqlQuery>
 #include <QSqlError>
 #include <QDebug>
-#include "util.h"
+#include "utils/util.h"
 #include <QSqlDriver>
 #include "archers/volley.h"
 

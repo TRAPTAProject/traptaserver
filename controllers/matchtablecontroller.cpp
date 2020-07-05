@@ -1,11 +1,11 @@
 #include "matchtablecontroller.h"
 #include <QDebug>
 #include <QHeaderView>
-#include "matchsetdialog.h"
-#include "util.h"
+#include "dialogs/matchsetdialog.h"
+#include "utils/util.h"
 #include "dialogs/msgbox.h"
-#include "sortingalgo.h"
-#include "matchvolleydialog.h"
+#include "utils/sortingalgo.h"
+#include "dialogs/matchvolleydialog.h"
 
 MatchTableController::MatchTableController(
         const QString &name,

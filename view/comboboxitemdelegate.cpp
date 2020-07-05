@@ -1,7 +1,7 @@
 #include "comboboxitemdelegate.h"
 #include <QComboBox>
 #include <QDebug>
-#include "util.h"
+#include "utils/util.h"
 
 ComboboxItemDelegate::ComboboxItemDelegate(QObject *parent) :
     QStyledItemDelegate(parent)

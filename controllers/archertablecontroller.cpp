@@ -4,7 +4,7 @@
 #include <QSettings>
 #include <QMenu>
 #include "dialogs/msgbox.h"
-#include "volleydialog.h"
+#include "dialogs/volleydialog.h"
 #include <QHeaderView>
 
 #define COLUMN_WIDTH_KEY "ColumnWidth2"

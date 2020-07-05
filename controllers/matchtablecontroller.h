@@ -6,9 +6,9 @@
 #include <QTableView>
 #include "database/datamodel.h"
 #include "tablecontroller.h"
-#include "matcharcheritemdelegate.h"
-#include "matchtargetitemdelegate.h"
-#include "matchmodeitemdelegate.h"
+#include "archers/matcharcheritemdelegate.h"
+#include "archers/matchtargetitemdelegate.h"
+#include "archers/matchmodeitemdelegate.h"
 
 class MatchTableController : public TableController
 {

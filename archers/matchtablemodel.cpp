@@ -1,7 +1,7 @@
 #include "matchtablemodel.h"
 #include <QDebug>
-#include "util.h"
-#include "sortingalgo.h"
+#include "utils/util.h"
+#include "utils/sortingalgo.h"
 #include "database/datamodel.h"
 
 MatchTableModel::MatchTableModel(int tabId,

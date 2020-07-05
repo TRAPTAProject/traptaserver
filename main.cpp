@@ -4,7 +4,7 @@
 #include <QDebug>
 #include <QList>
 #include "database/datamodel.h"
-#include "util.h"
+#include "utils/util.h"
 #include "archers/volley.h"
 #include <QSplashScreen>
 #include <QMessageBox>

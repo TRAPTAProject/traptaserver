@@ -5,12 +5,12 @@
 #include <QDebug>
 #include "network/connectivity.h"
 #include "network/ipchooser.h"
-#include "util.h"
+#include "utils/util.h"
 #include <QFileDialog>
 #include <QSettings>
 #include <QLineEdit>
 #include "dialogs/stringlistdialog.h"
-#include "archers/dialogmatchname.h"
+#include "dialogs/dialogmatchname.h"
 #include <QKeyEvent>
 #include <QBoxLayout>
 #include "pdf/pdfcreator.h"
@@ -18,7 +18,7 @@
 #include <QGraphicsOpacityEffect>
 #include "dialogs/msgbox.h"
 #include "dialogs/textfileeditor.h"
-#include "foldercompressor.h"
+#include "utils/foldercompressor.h"
 #include "define.h"
 #include "archers/archertablemodel.h"
 #include <QtGlobal>

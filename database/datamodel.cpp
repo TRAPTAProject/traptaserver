@@ -4,14 +4,14 @@
 #include <QJsonDocument>
 #include <QJsonObject>
 #include <QJsonArray>
-#include "util.h"
+#include "utils/util.h"
 #include <QMutexLocker>
 #include <QApplication>
 #include "archers/match.h"
 #include <QSettings>
 #include "archers/heatscorecard.h"
-#include "sortingalgo.h"
-#include "foldercompressor.h"
+#include "utils/sortingalgo.h"
+#include "utils/foldercompressor.h"
 #include <QTime>
 
 #define RANKING_TIMER_VALUE 5000 // msec : ranking is published every RANKING_TIMER_VALUE

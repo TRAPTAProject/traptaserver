@@ -3,7 +3,7 @@
 
 #include <QMainWindow>
 #include <QThread>
-#include "tablets/tabletserver.h"
+#include "network/tabletserver.h"
 #include "network/udpbroadcaster.h"
 #include "dialogs/settingsdialog.h"
 #include "tablets/tabletstatus.h"
@@ -11,9 +11,9 @@
 #include <QProcess>
 #include <QLabel>
 #include "archers/archertablemodel.h"
-#include "archers/archertablecontroller.h"
-#include "archers/matchtablecontroller.h"
-#include "lcdspinner.h"
+#include "controllers/archertablecontroller.h"
+#include "controllers/matchtablecontroller.h"
+#include "view/lcdspinner.h"
 
 #define BROADCASTER_ON
 #define DISABLE_ROLLCALL

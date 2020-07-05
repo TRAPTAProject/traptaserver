@@ -4,7 +4,7 @@
 #include <QPainter>
 #include <QFont>
 #include <QPdfWriter>
-#include "util.h"
+#include "utils/util.h"
 
 #define A4_WIDTH 210
 #define A4_HEIGHT 297

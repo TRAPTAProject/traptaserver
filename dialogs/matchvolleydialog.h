@@ -2,7 +2,7 @@
 #define MATCHVOLLEYDIALOG_H
 
 #include <QDialog>
-#include "matchscorecard.h"
+#include "archers/matchscorecard.h"
 
 namespace Ui {
 class MatchVolleyDialog;

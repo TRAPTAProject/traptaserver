@@ -3,8 +3,8 @@
 
 #include <QDialog>
 #include <QStandardItemModel>
-#include "archer.h"
-#include "heatscorecard.h"
+#include "archers/archer.h"
+#include "archers/heatscorecard.h"
 
 namespace Ui {
 class VolleyDialog;

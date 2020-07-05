@@ -1,7 +1,7 @@
 #include "archer.h"
 #include <QJsonObject>
 #include <QJsonArray>
-#include "util.h"
+#include "utils/util.h"
 #include "database/database.h"
 #include <QDebug>
 #include <QJsonDocument>

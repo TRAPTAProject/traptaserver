@@ -1,7 +1,7 @@
 #include "archertablemodel.h"
 #include <QDebug>
 #include <QIcon>
-#include "util.h"
+#include "utils/util.h"
 
 ArcherTableModel::ArcherTableModel(int shootId, const QList<Archer*>& archerList, bool x10, QObject *parent) :
     QAbstractTableModel(parent),

@@ -1,7 +1,7 @@
 #include "teamrankingmodel.h"
 #include <QDebug>
 #include <QModelIndex>
-#include "sortingalgo.h"
+#include "utils/sortingalgo.h"
 #include <QJsonArray>
 #include <QJsonObject>
 

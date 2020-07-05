@@ -3,15 +3,15 @@
 
 #include <QObject>
 #include <QTableView>
-#include "archertablemodel.h"
+#include "archers/archertablemodel.h"
 #include "database/datamodel.h"
 #include <QComboBox>
 #include <QCheckBox>
 #include <QMenu>
 #include <QAction>
-#include "comboboxitemdelegate.h"
-#include "lineedititemdelegate.h"
-#include "checkboxitemdelegate.h"
+#include "view/comboboxitemdelegate.h"
+#include "view/lineedititemdelegate.h"
+#include "view/checkboxitemdelegate.h"
 #include "tablecontroller.h"
 
 class ArcherTableController : public TableController

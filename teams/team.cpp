@@ -1,5 +1,5 @@
 #include "team.h"
-#include "sortingalgo.h"
+#include "utils/sortingalgo.h"
 
 int Team::_rankingHeatIndex = 0;
 int Team::_rankingVolleyIndex = 0;
