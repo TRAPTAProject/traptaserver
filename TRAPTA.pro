@@ -144,17 +144,19 @@ HEADERS  += \
     ../traptatransfer/sqlscript.h
 }
 
-FORMS    += mainwindow.ui \
-    ipchooser.ui \
-    settingsdialog.ui \
-    volleydialog.ui \
-    stringlistdialog.ui \
-    dialogmatchname.ui \
-    matchvolleydialog.ui \
-    pdfdialog.ui \
-    matchsetdialog.ui \
-    dialogbox.ui \
-    textfileeditor.ui
+FORMS    += \
+    forms/mainwindow.ui \
+    forms/ipchooser.ui \
+    forms/settingsdialog.ui \
+    forms/volleydialog.ui \
+    forms/stringlistdialog.ui \
+    forms/dialogmatchname.ui \
+    forms/matchvolleydialog.ui \
+    forms/pdfdialog.ui \
+    forms/matchsetdialog.ui \
+    forms/dialogbox.ui \
+    forms/textfileeditor.ui
+
 win32 {
 FORMS    += \
     ../traptatransfer/ratransfert.ui
