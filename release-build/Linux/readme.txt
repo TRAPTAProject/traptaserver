@@ -14,4 +14,4 @@ cd to the directory of this readme.txt file, then:
 
 $ docker run --rm -v ${PWD}:/host trapta_ubuntu:1.1 bash /host/build.sh
 
-Once done, you will find in the archive (.tar.gz) in the current dir
+Once done, you can find the archive (.tar.gz) in the current dir
