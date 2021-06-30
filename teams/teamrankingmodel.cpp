@@ -38,7 +38,7 @@ QJsonObject TeamRankingModel::toJson(int heatIndex, int volleyIndex) const {
             if (teamScore.score()>0) teamScoreList << teamScore;
         }
         // sort teams
-        qSort(teamScoreList.begin(), teamScoreList.end(), teamRankingLessThan);
+        std::sort(teamScoreList.begin(), teamScoreList.end(), teamRankingLessThan);
         rankingMap.insert(ruleName, teamScoreList);
     }
 
@@ -93,7 +93,7 @@ void TeamRankingModel::rebuildRanking(const QHash<QString, QList<Archer*>* >& cl
             if (teamScore.score()>0) teamScoreList << teamScore;
         }
         // sort teams
-        qSort(teamScoreList.begin(), teamScoreList.end(), teamRankingLessThan);
+        std::sort(teamScoreList.begin(), teamScoreList.end(), teamRankingLessThan);
         _flatList.append(teamScoreList);
         _rankingMap.insert(ruleName, teamScoreList);
     }

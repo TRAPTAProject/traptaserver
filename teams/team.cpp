@@ -34,7 +34,7 @@ TeamScore Team::score(const QString& teamCateg, const QList<TeamRule>& ruleList,
     // sort the list
     _rankingHeatIndex = heatIndex;
     _rankingVolleyIndex = volleyIndex;
-    qSort(sourceList.begin(), sourceList.end(), Team::scoreRankingLessThan);
+    std::sort(sourceList.begin(), sourceList.end(), Team::scoreRankingLessThan);
     QList<Archer*> targetList;
     foreach (TeamRule rule, ruleList) {
         // if everybody, take the category and find all archer matching category

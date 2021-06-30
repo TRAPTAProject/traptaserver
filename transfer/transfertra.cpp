@@ -13,11 +13,11 @@ TransfertRA::TransfertRA(QObject *parent) :
 
 
 
-Q_PID TransfertRA::run(int mode) {
+qint64 TransfertRA::run(int mode) {
     qDebug() << "Starting process TransfertRA";
     QStringList argList;
     argList << QString::number(mode);
     _process.start(QApplication::applicationDirPath()+"/TransfertResultarc.exe", argList);
-    _pid = _process.pid();
+    _pid = _process.processId();
     return _pid;
 }

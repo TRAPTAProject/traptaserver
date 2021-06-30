@@ -105,7 +105,7 @@ void TabletStatus::updateTabletStatus(quint32 ip, int targ, int batt, QString me
     info->setBatt(batt);
     info->addMessage(message);
     qDebug() << info->toString();
-    qSort(_tabletList.begin(), _tabletList.end(), SortingAlgo::tabletInfoLessThan);
+    std::sort(_tabletList.begin(), _tabletList.end(), SortingAlgo::tabletInfoLessThan);
     emit dataChanged(createIndex(0,0), createIndex(_tabletList.count(), 4));
 
 

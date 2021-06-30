@@ -29,7 +29,7 @@ QList<Archer *> MatchTableModel::archerComboList(int row, int playerIndex) {
 
     Match* match = _matchList.at(row);
     QList<Archer*> archerList = *(_model->getArcherListByCateg().value(match->categ()));
-    qSort(archerList.begin(), archerList.end(), SortingAlgo::alphaRankingLessThan);
+    std::sort(archerList.begin(), archerList.end(), SortingAlgo::alphaRankingLessThan);
     return archerList;
 }
 
@@ -72,8 +72,8 @@ bool MatchTableModel::removeMatchRow(int row) {
 
 void MatchTableModel::sort(int column, Qt::SortOrder order) {
     qDebug() << "Sorting column " << column << "order " << order;
-    if (column==TargetColumn && order==Qt::AscendingOrder) qSort(_matchList.begin(), _matchList.end(), sortTargetLessThan);
-    if (column==TargetColumn && order==Qt::DescendingOrder) qSort(_matchList.begin(), _matchList.end(), sortTargetGreaterThan);
+    if (column==TargetColumn && order==Qt::AscendingOrder) std::sort(_matchList.begin(), _matchList.end(), sortTargetLessThan);
+    if (column==TargetColumn && order==Qt::DescendingOrder) std::sort(_matchList.begin(), _matchList.end(), sortTargetGreaterThan);
     emit dataChanged(createIndex(0,0), createIndex(_matchList.count(), MATCHTABLE_COLUMN_COUNT));
 }
 

@@ -67,18 +67,18 @@ bool ArcherTableModel::removeArcher(int row) {
 
 void ArcherTableModel::sort(int column, Qt::SortOrder order) {
     qDebug() << "Sorting column " << column << "order " << order;
-    if (column==PositionColumn && order==Qt::AscendingOrder) qSort(_archerList.begin(), _archerList.end(), sortPositionLessThan);
-    if (column==PositionColumn && order==1) qSort(_archerList.begin(), _archerList.end(), sortPositionGreaterThan);
-    if (column==LicenseColumn && order==Qt::AscendingOrder) qSort(_archerList.begin(), _archerList.end(), sortLicenseLessThan);
-    if (column==LicenseColumn && order==Qt::DescendingOrder) qSort(_archerList.begin(), _archerList.end(), sortLicenseGreaterThan);
-    if (column==CategoryColumn && order==Qt::AscendingOrder) qSort(_archerList.begin(), _archerList.end(), sortCategoryLessThan);
-    if (column==CategoryColumn && order==Qt::DescendingOrder) qSort(_archerList.begin(), _archerList.end(), sortCategoryGreaterThan);
-    if (column==NameColumn && order==Qt::AscendingOrder) qSort(_archerList.begin(), _archerList.end(), sortNameLessThan);
-    if (column==NameColumn && order==Qt::DescendingOrder) qSort(_archerList.begin(), _archerList.end(), sortNameGreaterThan);
-    if (column==NocColumn && order==Qt::AscendingOrder) qSort(_archerList.begin(), _archerList.end(), sortNOCLessThan);
-    if (column==NocColumn && order==Qt::DescendingOrder) qSort(_archerList.begin(), _archerList.end(), sortNOCGreaterThan);
-    if (column==ScoreColumn && order==Qt::AscendingOrder) qSort(_archerList.begin(), _archerList.end(), sortScoreLessThan);
-    if (column==ScoreColumn && order==Qt::DescendingOrder) qSort(_archerList.begin(), _archerList.end(), sortScoreGreaterThan);
+    if (column==PositionColumn && order==Qt::AscendingOrder) std::sort(_archerList.begin(), _archerList.end(), sortPositionLessThan);
+    if (column==PositionColumn && order==1) std::sort(_archerList.begin(), _archerList.end(), sortPositionGreaterThan);
+    if (column==LicenseColumn && order==Qt::AscendingOrder) std::sort(_archerList.begin(), _archerList.end(), sortLicenseLessThan);
+    if (column==LicenseColumn && order==Qt::DescendingOrder) std::sort(_archerList.begin(), _archerList.end(), sortLicenseGreaterThan);
+    if (column==CategoryColumn && order==Qt::AscendingOrder) std::sort(_archerList.begin(), _archerList.end(), sortCategoryLessThan);
+    if (column==CategoryColumn && order==Qt::DescendingOrder) std::sort(_archerList.begin(), _archerList.end(), sortCategoryGreaterThan);
+    if (column==NameColumn && order==Qt::AscendingOrder) std::sort(_archerList.begin(), _archerList.end(), sortNameLessThan);
+    if (column==NameColumn && order==Qt::DescendingOrder) std::sort(_archerList.begin(), _archerList.end(), sortNameGreaterThan);
+    if (column==NocColumn && order==Qt::AscendingOrder) std::sort(_archerList.begin(), _archerList.end(), sortNOCLessThan);
+    if (column==NocColumn && order==Qt::DescendingOrder) std::sort(_archerList.begin(), _archerList.end(), sortNOCGreaterThan);
+    if (column==ScoreColumn && order==Qt::AscendingOrder) std::sort(_archerList.begin(), _archerList.end(), sortScoreLessThan);
+    if (column==ScoreColumn && order==Qt::DescendingOrder) std::sort(_archerList.begin(), _archerList.end(), sortScoreGreaterThan);
 
     emit dataChanged(createIndex(0,0), createIndex(_archerList.count(), ARCHERTABLE_COLUMN_COUNT));
 }
