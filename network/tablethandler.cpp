@@ -5,7 +5,6 @@
 #include <QList>
 #include <QJsonArray>
 #include <QJsonValue>
-#include "util.h"
 #include <QHostAddress>
 
 #define READ_TIMEOUT 6000
