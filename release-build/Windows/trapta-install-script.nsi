@@ -20,7 +20,7 @@
 
 Name "${PRODUCT_NAME} ${PRODUCT_VERSION}"
 OutFile "archives\TRAPTA1.26-install.exe"
-InstallDir "$PROGRAMFILES\TRAPTA"
+InstallDir "$PROGRAMFILES64\TRAPTA"
 ShowInstDetails show
 
 Section "MainSection" SEC01
