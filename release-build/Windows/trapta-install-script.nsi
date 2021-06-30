@@ -1,5 +1,5 @@
 !define PRODUCT_NAME "TRAPTA"
-!define PRODUCT_VERSION "1.25"
+!define PRODUCT_VERSION "1.26"
 !define PRODUCT_WEB_SITE "www.trapta.eu"
 
 !include "MUI.nsh"
@@ -19,8 +19,8 @@
 !insertmacro MUI_LANGUAGE "French"
 
 Name "${PRODUCT_NAME} ${PRODUCT_VERSION}"
-OutFile "archives\TRAPTA1.25-install.exe"
-InstallDir "$PROGRAMFILES\TRAPTA"
+OutFile "archives\TRAPTA1.26-install.exe"
+InstallDir "$PROGRAMFILES64\TRAPTA"
 ShowInstDetails show
 
 Section "MainSection" SEC01
