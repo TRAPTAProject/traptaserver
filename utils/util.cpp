@@ -24,7 +24,7 @@ void Util::init() {
     matchTargetMap.append(QList<int>() << 1 << 8 << 5 << 4 << 3 << 6 << 7 << 2); // 4th
     matchTargetMap.append(QList<int>() << 1 << 16 << 9 << 8 << 5 << 12 << 13 << 4 << 3 << 14 << 11 << 6 << 7 << 10 << 15 << 2); // 8th
 
-    QDir dir(QStandardPaths::writableLocation(QStandardPaths::DataLocation));
+    QDir dir(QStandardPaths::writableLocation(QStandardPaths::AppDataLocation));
     if (!dir.exists()) {
         qDebug() << "Creating " << dir.absolutePath();
         bool ok = QDir().mkpath(dir.absolutePath());
@@ -100,7 +100,7 @@ QString Util::targetLabelFromPosition(int position) {
 }
 
 QString Util::normalize(const QString& string) {
-    return string.normalized (QString::NormalizationForm_KD).remove(QRegExp("[^a-zA-Z0-9\\s\\-]"));
+    return string.normalized (QString::NormalizationForm_KD).remove(QRegularExpression("[^a-zA-Z0-9\\s\\-]"));
 }
 
 int Util::targetIdFromPosition(int position) {

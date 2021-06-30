@@ -75,7 +75,7 @@ bool PDFCreator::create(const QString& filename,
                         bool x10) {
 
     QPdfWriter printer(filename);
-    printer.setPageSize(QPdfWriter::A4);
+    printer.setPageSize(QPageSize::A4);
     _pageWidth = printer.width();
     _pageHeight = printer.height();
     qDebug() << "Page width=" << _pageWidth;

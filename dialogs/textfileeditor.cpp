@@ -3,6 +3,7 @@
 #include "msgbox.h"
 #include <QTextStream>
 #include <QDebug>
+#include <QFile>
 
 TextFileEditor::TextFileEditor(const QString& defaultFilename, const QString &filename, const QString &title, const QString& label, QWidget *parent) :
     QDialog(parent),

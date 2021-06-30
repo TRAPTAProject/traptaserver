@@ -8,7 +8,7 @@ class TransfertRA : public QObject {
     Q_OBJECT
 public:
     explicit TransfertRA(QObject *parent = 0);
-    Q_PID run(int mode); // return pid
+    qint64 run(int mode); // return pid
 
 
 signals:
@@ -19,7 +19,7 @@ signals:
 private:
 
     QProcess _process;
-    Q_PID _pid;
+    qint64 _pid;
     
 };
 

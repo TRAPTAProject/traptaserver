@@ -280,7 +280,7 @@ QList<Archer*> DataModel::getArcherListSortedByScore(int shootId, const QString&
                 list.append(archer);
     }
     // sort the list
-    qSort(list.begin(), list.end(), SortingAlgo::scoreFullRankingLessThan);
+    std::sort(list.begin(), list.end(), SortingAlgo::scoreFullRankingLessThan);
 
     return list;
 }
@@ -302,7 +302,7 @@ QList<Archer*> DataModel::getArcherListSortedByName(int shootId, const QString& 
                     list.append(archer);
 
     // sort the list
-    qSort(list.begin(), list.end(), SortingAlgo::alphaRankingLessThan);
+    std::sort(list.begin(), list.end(), SortingAlgo::alphaRankingLessThan);
 
     return list;
 }
@@ -312,12 +312,12 @@ QList<Archer*> DataModel::getArcherListSortedByPosition(int shootId) const {
     QList<Archer*> list;
     if (shootId<1) {
         list = _archerMap.values();
-        qSort(list.begin(), list.end(), SortingAlgo::shootIdPositionRankingLessThan);
+        std::sort(list.begin(), list.end(), SortingAlgo::shootIdPositionRankingLessThan);
     } else {
         foreach (Archer* archer, _archerMap.values())
             if (archer->shootId()==shootId) list.append(archer);
         // sort the list
-        qSort(list.begin(), list.end(), SortingAlgo::positionRankingLessThan);
+        std::sort(list.begin(), list.end(), SortingAlgo::positionRankingLessThan);
     }
     return list;
 }
@@ -730,7 +730,7 @@ void DataModel::updateMatchRanking() {
     qDebug() << "Updating match ranking";
     // get the list of matches for the current tab
     QList<Match*> list = getMatchList(_currentDisplayTabId);
-    qSort(list.begin(), list.end(), SortingAlgo::matchTargetLessThan);
+    std::sort(list.begin(), list.end(), SortingAlgo::matchTargetLessThan);
     QJsonObject root;
     root.insert("dataType", QString("matches"));
     root.insert("title", _tabMap.value(_currentDisplayTabId, "?"));
@@ -787,7 +787,7 @@ void DataModel::updateRanking2() {
     QHash<QString, QList<Archer*>* > sortedRankMap = _categMap;  // make a copy of the list
     foreach (QString categ, sortedRankMap.keys()) {
         QList<Archer*>* list = sortedRankMap.value(categ);
-        qSort(list->begin(), list->end(), SortingAlgo::scoreRankingLessThan);
+        std::sort(list->begin(), list->end(), SortingAlgo::scoreRankingLessThan);
     }
 
     // determine order of categories

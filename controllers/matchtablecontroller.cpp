@@ -126,7 +126,7 @@ void MatchTableController::addMatchSet() {
         qDebug() << "Selected tab to create matches: " << previousTabId;
         // get the list of matchModel for this tab
         QList<Match*> matchList = _model->getMatchList(previousTabId, categ);
-        qSort(matchList.begin(), matchList.end(), SortingAlgo::matchRankingLessThan);
+        std::sort(matchList.begin(), matchList.end(), SortingAlgo::matchRankingLessThan);
 
         if (round==1) {  // final
             Match* match0 = matchList.at(0);
