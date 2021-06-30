@@ -224,7 +224,7 @@ bool PDFCreator::create(const QString& filename,
         painter.translate(x0(100), y0(100));
         painter.rotate(-90);
         painter.drawPixmap(0,-h(7),w(7),h(7), QPixmap(":/images/icon.png"));
-        painter.drawText(QPointF(w(11), -w(1)), "www.trapta.fr");
+        painter.drawText(QPointF(w(11), -w(1)), "www.trapta.eu");
         painter.restore();
         printer.newPage();
     }
