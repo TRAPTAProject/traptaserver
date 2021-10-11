@@ -675,7 +675,7 @@ void TRAPTA::menuClearPoints() {
 
 void TRAPTA::processAboutClicked() {
     qDebug() << "About clicked";
-    MsgBox::popup(MsgBox::idea, QString("TRAPTA %0\n%1\nwww.trapta.eu\nDatabase: %2").arg(VERSION).arg(DATE).arg(Util::workingDir), "", "     OK     ");
+    MsgBox::popup(MsgBox::idea, QString("TRAPTA %0\n%1\nhttps://github.com/TRAPTAProject\nDatabase: %2").arg(VERSION).arg(DATE).arg(Util::workingDir), "", "     OK     ");
 }
 
 void TRAPTA::menuExportCSV() {

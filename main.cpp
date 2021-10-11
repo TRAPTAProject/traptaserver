@@ -50,7 +50,7 @@ int main(int argc, char *argv[]) {
 
     QApplication app(argc, argv);
     QApplication::setOrganizationName("TRAPTA");
-    QApplication::setOrganizationDomain("trapta.eu");
+    QApplication::setOrganizationDomain("traptadomain");
     QApplication::setApplicationName("TRAPTAServer");
 
     qInstallMessageHandler(messageHandler);
