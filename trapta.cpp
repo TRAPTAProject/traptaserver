@@ -117,6 +117,7 @@ TRAPTA::TRAPTA(DataModel* model) :
     connect(ui->actionSupprimer_tour_de_match_courant, SIGNAL(triggered()), SLOT(menuDeleteMatchTab()));
     connect(ui->action_Ajouter_categorie, SIGNAL(triggered()), _matchTableController, SLOT(addMatchSet()));
     connect(ui->action_change_color, SIGNAL(triggered()), SIGNAL(changeColor()));
+    connect(ui->action_Export_Competition, SIGNAL(triggered()), this, SLOT(menuExportCompetition()));
 
     _currentSelectedTablet = -1;
     ui->displayRoundBox->setVisible(false);
@@ -531,6 +532,55 @@ void TRAPTA::menuExportRA() {
     RATransfert raTransfer(2, stringList, startId);
     raTransfer.setModal(true);
     raTransfer.exec();
+}
+
+void TRAPTA::menuExportCompetition() {
+
+    qDebug() << "Processing export Competition CSV";
+    QSettings settings;
+    QString filename = settings.value("exportcompetiton", "competition.csv").toString();
+    filename = QFileDialog::getSaveFileName(this, tr("Export de la Competition vers fichier CSV"), filename, "Fichier csv (*.csv);;Tous les fichiers (*.*)");
+    if (filename.isNull() || filename.isEmpty()) return;
+    settings.setValue("exportcompetiton", filename);
+    exportCompetition(filename);
+}
+
+void TRAPTA::exportCompetition(const QString& filename) {
+
+    QFile file(filename);
+    if (!file.open(QIODevice::WriteOnly | QIODevice::Text)) {
+        MsgBox::popup(MsgBox::critical, "Impossible de créer le fichier "+filename, "", "     OK     ");
+        return;
+    }
+    QTextStream out(&file);
+    QList<Archer*> archerList = _dataModel->getArcherListSortedByName();
+    foreach (Archer* archer, archerList) {
+        int score1 = archer->score(0);
+        int score2 = archer->score(1);
+        int score3 = archer->score(2);
+        int score4 = archer->score(3);
+        int score_total = score1 + score2 + score3 + score4;
+        int nb10 = archer->criteria1();
+        int nb9 = archer->criteria2();
+        QStringList list;
+        list << archer->license();
+        list << archer->firstName();
+        list << archer->lastName();
+        list << archer->noc();
+        list << archer->categ();
+        list << archer->license();
+        list << QString::number(archer->shootId());
+        list << QString::number(score_total);
+        list << QString::number(nb10);
+        list << QString::number(nb9);
+        list << QString::number(nb9);
+        list <<  QString::number(archer->position());
+        QString string = list.join(';');
+        qDebug() << string;
+        out << string << "\n";
+    }
+    file.close();
+    MsgBox::popup(MsgBox::info, tr("Les résultats de la compétition ont été exportés dans le fichier %0").arg(filename), "", "     OK     ");
 }
 
 #endif

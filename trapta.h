@@ -90,6 +90,7 @@ private slots:
     void onMatchTabIndexChanged();
     void onMatchDisplayTabIndexChanged(int index);
 
+    void menuExportCompetition();
 #ifdef Q_OS_WIN32
 
     void menuImportRA();
@@ -126,6 +127,7 @@ private:
 
     void importCSV(const QString& filename);
     void exportCSV(const QString& filename, int startId);
+    void exportCompetition(const QString& filename);
     int getSelectedMatchRoundIndex();
 
 };

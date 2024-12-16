@@ -49,7 +49,7 @@
           </sizepolicy>
          </property>
          <property name="tabPosition">
-          <enum>QTabWidget::North</enum>
+          <enum>QTabWidget::TabPosition::North</enum>
          </property>
          <property name="currentIndex">
           <number>0</number>
@@ -217,7 +217,7 @@
                  </sizepolicy>
                 </property>
                 <property name="layoutDirection">
-                 <enum>Qt::RightToLeft</enum>
+                 <enum>Qt::LayoutDirection::RightToLeft</enum>
                 </property>
                 <property name="text">
                  <string>  10X  </string>
@@ -236,10 +236,10 @@
               </sizepolicy>
              </property>
              <property name="selectionMode">
-              <enum>QAbstractItemView::SingleSelection</enum>
+              <enum>QAbstractItemView::SelectionMode::SingleSelection</enum>
              </property>
              <property name="selectionBehavior">
-              <enum>QAbstractItemView::SelectRows</enum>
+              <enum>QAbstractItemView::SelectionBehavior::SelectRows</enum>
              </property>
              <property name="sortingEnabled">
               <bool>true</bool>
@@ -311,7 +311,7 @@
               <item>
                <spacer name="horizontalSpacer">
                 <property name="orientation">
-                 <enum>Qt::Horizontal</enum>
+                 <enum>Qt::Orientation::Horizontal</enum>
                 </property>
                 <property name="sizeHint" stdset="0">
                  <size>
@@ -356,7 +356,7 @@ Exemple 2 : SHCL* + JHCL* (n scores additionnés: tous les SHCL + tous les JHCL)
 Dans le panneau ARCHERS, n'oubliez pas de cocher la colonne 'équipier' des archers qui compteront comme équipiers.</string>
              </property>
              <property name="textFormat">
-              <enum>Qt::PlainText</enum>
+              <enum>Qt::TextFormat::PlainText</enum>
              </property>
              <property name="wordWrap">
               <bool>true</bool>
@@ -375,19 +375,19 @@ Dans le panneau ARCHERS, n'oubliez pas de cocher la colonne 'équipier' des arch
               </sizepolicy>
              </property>
              <property name="frameShape">
-              <enum>QFrame::StyledPanel</enum>
+              <enum>QFrame::Shape::StyledPanel</enum>
              </property>
              <property name="editTriggers">
-              <set>QAbstractItemView::DoubleClicked</set>
+              <set>QAbstractItemView::EditTrigger::DoubleClicked</set>
              </property>
              <property name="alternatingRowColors">
               <bool>false</bool>
              </property>
              <property name="selectionMode">
-              <enum>QAbstractItemView::SingleSelection</enum>
+              <enum>QAbstractItemView::SelectionMode::SingleSelection</enum>
              </property>
              <property name="selectionBehavior">
-              <enum>QAbstractItemView::SelectRows</enum>
+              <enum>QAbstractItemView::SelectionBehavior::SelectRows</enum>
              </property>
              <property name="sortingEnabled">
               <bool>false</bool>
@@ -419,13 +419,13 @@ Dans le panneau ARCHERS, n'oubliez pas de cocher la colonne 'équipier' des arch
            <item>
             <widget class="QTableView" name="rankingTeamView">
              <property name="editTriggers">
-              <set>QAbstractItemView::NoEditTriggers</set>
+              <set>QAbstractItemView::EditTrigger::NoEditTriggers</set>
              </property>
              <property name="selectionMode">
-              <enum>QAbstractItemView::NoSelection</enum>
+              <enum>QAbstractItemView::SelectionMode::NoSelection</enum>
              </property>
              <property name="selectionBehavior">
-              <enum>QAbstractItemView::SelectRows</enum>
+              <enum>QAbstractItemView::SelectionBehavior::SelectRows</enum>
              </property>
              <property name="cornerButtonEnabled">
               <bool>false</bool>
@@ -552,7 +552,7 @@ Dans le panneau ARCHERS, n'oubliez pas de cocher la colonne 'équipier' des arch
               <item>
                <spacer name="horizontalSpacer_2">
                 <property name="orientation">
-                 <enum>Qt::Horizontal</enum>
+                 <enum>Qt::Orientation::Horizontal</enum>
                 </property>
                 <property name="sizeHint" stdset="0">
                  <size>
@@ -589,10 +589,10 @@ Dans le panneau ARCHERS, n'oubliez pas de cocher la colonne 'équipier' des arch
            <item>
             <widget class="QTableView" name="matchTableView">
              <property name="selectionMode">
-              <enum>QAbstractItemView::SingleSelection</enum>
+              <enum>QAbstractItemView::SelectionMode::SingleSelection</enum>
              </property>
              <property name="selectionBehavior">
-              <enum>QAbstractItemView::SelectRows</enum>
+              <enum>QAbstractItemView::SelectionBehavior::SelectRows</enum>
              </property>
              <property name="sortingEnabled">
               <bool>true</bool>
@@ -627,7 +627,7 @@ Dans le panneau ARCHERS, n'oubliez pas de cocher la colonne 'équipier' des arch
           <number>15</number>
          </property>
          <property name="sizeConstraint">
-          <enum>QLayout::SetFixedSize</enum>
+          <enum>QLayout::SizeConstraint::SetFixedSize</enum>
          </property>
          <property name="rightMargin">
           <number>15</number>
@@ -644,7 +644,7 @@ Dans le panneau ARCHERS, n'oubliez pas de cocher la colonne 'équipier' des arch
             <string/>
            </property>
            <property name="pixmap">
-            <pixmap resource="resources.qrc">:/images/green-light.png</pixmap>
+            <pixmap resource="../resources.qrc">:/images/green-light.png</pixmap>
            </property>
           </widget>
          </item>
@@ -657,25 +657,25 @@ Dans le panneau ARCHERS, n'oubliez pas de cocher la colonne 'équipier' des arch
             </sizepolicy>
            </property>
            <property name="layoutDirection">
-            <enum>Qt::LeftToRight</enum>
+            <enum>Qt::LayoutDirection::LeftToRight</enum>
            </property>
            <property name="styleSheet">
             <string notr="true"/>
            </property>
            <property name="frameShadow">
-            <enum>QFrame::Plain</enum>
+            <enum>QFrame::Shadow::Plain</enum>
            </property>
            <property name="text">
             <string>Serveurs arrêtés  </string>
            </property>
            <property name="textFormat">
-            <enum>Qt::PlainText</enum>
+            <enum>Qt::TextFormat::PlainText</enum>
            </property>
            <property name="scaledContents">
             <bool>false</bool>
            </property>
            <property name="alignment">
-            <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+            <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignVCenter</set>
            </property>
           </widget>
          </item>
@@ -719,6 +719,8 @@ Dans le panneau ARCHERS, n'oubliez pas de cocher la colonne 'équipier' des arch
     <addaction name="separator"/>
     <addaction name="actionImportResultarc"/>
     <addaction name="action_Exporter_vers_Resultarc"/>
+    <addaction name="separator"/>
+    <addaction name="action_Export_Competition"/>
     <addaction name="separator"/>
     <addaction name="action_addArcher"/>
     <addaction name="action_delete_current_startId"/>
@@ -768,10 +770,10 @@ Dans le panneau ARCHERS, n'oubliez pas de cocher la colonne 'équipier' des arch
     <bool>false</bool>
    </property>
    <property name="features">
-    <set>QDockWidget::DockWidgetFloatable</set>
+    <set>QDockWidget::DockWidgetFeature::DockWidgetFloatable</set>
    </property>
    <property name="allowedAreas">
-    <set>Qt::RightDockWidgetArea</set>
+    <set>Qt::DockWidgetArea::RightDockWidgetArea</set>
    </property>
    <property name="windowTitle">
     <string>CONTROLE</string>
@@ -847,7 +849,7 @@ Dans le panneau ARCHERS, n'oubliez pas de cocher la colonne 'équipier' des arch
          <item>
           <widget class="Line" name="line_2">
            <property name="orientation">
-            <enum>Qt::Horizontal</enum>
+            <enum>Qt::Orientation::Horizontal</enum>
            </property>
           </widget>
          </item>
@@ -916,7 +918,7 @@ Dans le panneau ARCHERS, n'oubliez pas de cocher la colonne 'équipier' des arch
                <string>Série</string>
               </property>
               <property name="alignment">
-               <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+               <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignTop</set>
               </property>
              </widget>
             </item>
@@ -941,13 +943,13 @@ Dans le panneau ARCHERS, n'oubliez pas de cocher la colonne 'équipier' des arch
                </size>
               </property>
               <property name="frameShape">
-               <enum>QFrame::NoFrame</enum>
+               <enum>QFrame::Shape::NoFrame</enum>
               </property>
               <property name="digitCount">
                <number>2</number>
               </property>
               <property name="segmentStyle">
-               <enum>QLCDNumber::Flat</enum>
+               <enum>QLCDNumber::SegmentStyle::Flat</enum>
               </property>
               <property name="value" stdset="0">
                <double>1.000000000000000</double>
@@ -1060,7 +1062,7 @@ Dans le panneau ARCHERS, n'oubliez pas de cocher la colonne 'équipier' des arch
                <string>Volée</string>
               </property>
               <property name="alignment">
-               <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+               <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignTop</set>
               </property>
              </widget>
             </item>
@@ -1088,13 +1090,13 @@ Dans le panneau ARCHERS, n'oubliez pas de cocher la colonne 'équipier' des arch
                <string>Numéro de volée affichée</string>
               </property>
               <property name="frameShape">
-               <enum>QFrame::NoFrame</enum>
+               <enum>QFrame::Shape::NoFrame</enum>
               </property>
               <property name="digitCount">
                <number>2</number>
               </property>
               <property name="segmentStyle">
-               <enum>QLCDNumber::Flat</enum>
+               <enum>QLCDNumber::SegmentStyle::Flat</enum>
               </property>
               <property name="value" stdset="0">
                <double>1.000000000000000</double>
@@ -1198,7 +1200,7 @@ Dans le panneau ARCHERS, n'oubliez pas de cocher la colonne 'équipier' des arch
          <item>
           <spacer name="verticalSpacer">
            <property name="orientation">
-            <enum>Qt::Vertical</enum>
+            <enum>Qt::Orientation::Vertical</enum>
            </property>
            <property name="sizeHint" stdset="0">
             <size>
@@ -1233,13 +1235,13 @@ Dans le panneau ARCHERS, n'oubliez pas de cocher la colonne 'équipier' des arch
          <item>
           <widget class="QTableView" name="tabletTableView">
            <property name="frameShape">
-            <enum>QFrame::NoFrame</enum>
+            <enum>QFrame::Shape::NoFrame</enum>
            </property>
            <property name="frameShadow">
-            <enum>QFrame::Plain</enum>
+            <enum>QFrame::Shadow::Plain</enum>
            </property>
            <property name="editTriggers">
-            <set>QAbstractItemView::NoEditTriggers</set>
+            <set>QAbstractItemView::EditTrigger::NoEditTriggers</set>
            </property>
            <property name="tabKeyNavigation">
             <bool>false</bool>
@@ -1251,10 +1253,10 @@ Dans le panneau ARCHERS, n'oubliez pas de cocher la colonne 'équipier' des arch
             <bool>false</bool>
            </property>
            <property name="selectionMode">
-            <enum>QAbstractItemView::NoSelection</enum>
+            <enum>QAbstractItemView::SelectionMode::NoSelection</enum>
            </property>
            <property name="selectionBehavior">
-            <enum>QAbstractItemView::SelectRows</enum>
+            <enum>QAbstractItemView::SelectionBehavior::SelectRows</enum>
            </property>
            <property name="wordWrap">
             <bool>false</bool>
@@ -1308,7 +1310,7 @@ Dans le panneau ARCHERS, n'oubliez pas de cocher la colonne 'équipier' des arch
   </widget>
   <action name="actionImportCSV">
    <property name="icon">
-    <iconset resource="resources.qrc">
+    <iconset resource="../resources.qrc">
      <normaloff>:/images/import.png</normaloff>:/images/import.png</iconset>
    </property>
    <property name="text">
@@ -1317,7 +1319,7 @@ Dans le panneau ARCHERS, n'oubliez pas de cocher la colonne 'équipier' des arch
   </action>
   <action name="actionExportCVS">
    <property name="icon">
-    <iconset resource="resources.qrc">
+    <iconset resource="../resources.qrc">
      <normaloff>:/images/export.png</normaloff>:/images/export.png</iconset>
    </property>
    <property name="text">
@@ -1326,7 +1328,7 @@ Dans le panneau ARCHERS, n'oubliez pas de cocher la colonne 'équipier' des arch
   </action>
   <action name="action_addArcher">
    <property name="icon">
-    <iconset resource="resources.qrc">
+    <iconset resource="../resources.qrc">
      <normaloff>:/images/plus.png</normaloff>:/images/plus.png</iconset>
    </property>
    <property name="text">
@@ -1335,7 +1337,7 @@ Dans le panneau ARCHERS, n'oubliez pas de cocher la colonne 'équipier' des arch
   </action>
   <action name="action_delete_points">
    <property name="icon">
-    <iconset resource="resources.qrc">
+    <iconset resource="../resources.qrc">
      <normaloff>:/images/clear.png</normaloff>:/images/clear.png</iconset>
    </property>
    <property name="text">
@@ -1359,7 +1361,7 @@ Dans le panneau ARCHERS, n'oubliez pas de cocher la colonne 'équipier' des arch
   </action>
   <action name="actionImportResultarc">
    <property name="icon">
-    <iconset resource="resources.qrc">
+    <iconset resource="../resources.qrc">
      <normaloff>:/images/import-ra.png</normaloff>:/images/import-ra.png</iconset>
    </property>
    <property name="text">
@@ -1368,7 +1370,7 @@ Dans le panneau ARCHERS, n'oubliez pas de cocher la colonne 'équipier' des arch
   </action>
   <action name="action_Exporter_vers_Resultarc">
    <property name="icon">
-    <iconset resource="resources.qrc">
+    <iconset resource="../resources.qrc">
      <normaloff>:/images/export-ra.png</normaloff>:/images/export-ra.png</iconset>
    </property>
    <property name="text">
@@ -1429,7 +1431,7 @@ Dans le panneau ARCHERS, n'oubliez pas de cocher la colonne 'équipier' des arch
   </action>
   <action name="action_delete_current_startId">
    <property name="icon">
-    <iconset resource="resources.qrc">
+    <iconset resource="../resources.qrc">
      <normaloff>:/images/close-button.png</normaloff>:/images/close-button.png</iconset>
    </property>
    <property name="text">
@@ -1485,7 +1487,7 @@ Dans le panneau ARCHERS, n'oubliez pas de cocher la colonne 'équipier' des arch
   </action>
   <action name="actionAddSample">
    <property name="icon">
-    <iconset resource="resources.qrc">
+    <iconset resource="../resources.qrc">
      <normaloff>:/images/import.png</normaloff>:/images/import.png</iconset>
    </property>
    <property name="text">
@@ -1499,7 +1501,7 @@ Dans le panneau ARCHERS, n'oubliez pas de cocher la colonne 'équipier' des arch
   </action>
   <action name="action_Export_PDF_vers_fichier">
    <property name="icon">
-    <iconset resource="resources.qrc">
+    <iconset resource="../resources.qrc">
      <normaloff>:/images/pdf.png</normaloff>:/images/pdf.png</iconset>
    </property>
    <property name="text">
@@ -1517,7 +1519,7 @@ Dans le panneau ARCHERS, n'oubliez pas de cocher la colonne 'équipier' des arch
   </action>
   <action name="action_reset_all_2">
    <property name="icon">
-    <iconset resource="resources.qrc">
+    <iconset resource="../resources.qrc">
      <normaloff>:/images/close-button.png</normaloff>:/images/close-button.png</iconset>
    </property>
    <property name="text">
@@ -1536,7 +1538,7 @@ Dans le panneau ARCHERS, n'oubliez pas de cocher la colonne 'équipier' des arch
   </action>
   <action name="action_Ajouter_tour_de_match">
    <property name="icon">
-    <iconset resource="resources.qrc">
+    <iconset resource="../resources.qrc">
      <normaloff>:/images/plus.png</normaloff>:/images/plus.png</iconset>
    </property>
    <property name="text">
@@ -1545,7 +1547,7 @@ Dans le panneau ARCHERS, n'oubliez pas de cocher la colonne 'équipier' des arch
   </action>
   <action name="action_Ajouter_categorie">
    <property name="icon">
-    <iconset resource="resources.qrc">
+    <iconset resource="../resources.qrc">
      <normaloff>:/images/plus.png</normaloff>:/images/plus.png</iconset>
    </property>
    <property name="text">
@@ -1563,7 +1565,7 @@ Dans le panneau ARCHERS, n'oubliez pas de cocher la colonne 'équipier' des arch
   </action>
   <action name="actionSupprimer_tour_de_match_courant">
    <property name="icon">
-    <iconset resource="resources.qrc">
+    <iconset resource="../resources.qrc">
      <normaloff>:/images/close-button.png</normaloff>:/images/close-button.png</iconset>
    </property>
    <property name="text">
@@ -1580,10 +1582,22 @@ Dans le panneau ARCHERS, n'oubliez pas de cocher la colonne 'équipier' des arch
     <string>Couleurs claires</string>
    </property>
   </action>
+  <action name="action_Export_Competition">
+   <property name="icon">
+    <iconset resource="../resources.qrc">
+     <normaloff>:/images/export.png</normaloff>:/images/export.png</iconset>
+   </property>
+   <property name="text">
+    <string>Exporter Competition</string>
+   </property>
+   <property name="toolTip">
+    <string>Exporter la Competition vers fichier CSV</string>
+   </property>
+  </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources>
-  <include location="resources.qrc"/>
+  <include location="../resources.qrc"/>
  </resources>
  <connections>
   <connection>
